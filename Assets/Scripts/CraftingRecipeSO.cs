@@ -6,6 +6,7 @@ using UnityEngine;
 [CreateAssetMenu()]
 public class CraftingRecipeSO : ScriptableObject
 {
+
     public List<ItemSO> inputItemSOList;
-    public ItemSO outputItemSO;
+    public GameObject outputItemSO;
 }

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: CraftingRecipeSO
   m_EditorClassIdentifier: 
   inputItemSOList:
-  - {fileID: 11400000, guid: 49db765336569cc4b90112e6b386e46a, type: 2}
   - {fileID: 11400000, guid: 63e67016b1c2d774e9d25fb19d7ab6ec, type: 2}
+  - {fileID: 11400000, guid: 27f07666cf20f104eb47e9060d7af4ba, type: 2}
   outputItemSO: {fileID: 11400000, guid: 49db765336569cc4b90112e6b386e46a, type: 2}
