@@ -3810,6 +3810,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TurretC
       objectReference: {fileID: 0}
+    - target: {fileID: 5503089545882224880, guid: 4c25b1bd1227c5a448a92b2c5b819a63, type: 3}
+      propertyPath: bulletPrefab2
+      value: 
+      objectReference: {fileID: 4036459999960030016, guid: 4627c44ed10b5184ea186956400bf953, type: 3}
     - target: {fileID: 5807858967949297299, guid: 4c25b1bd1227c5a448a92b2c5b819a63, type: 3}
       propertyPath: m_InteractionManager
       value: 
@@ -4209,6 +4213,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 947232589686530743, guid: b4365ee6445cd31419f18cfe3fdb2496, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 7893370177717212354, guid: 3951992702f06c14b80360613a324b08, type: 3}
+    - target: {fileID: 947232589686530743, guid: b4365ee6445cd31419f18cfe3fdb2496, type: 3}
+      propertyPath: bulletPrefab2
+      value: 
+      objectReference: {fileID: 4036459999960030016, guid: 4627c44ed10b5184ea186956400bf953, type: 3}
     - target: {fileID: 3172533718982182641, guid: b4365ee6445cd31419f18cfe3fdb2496, type: 3}
       propertyPath: isPlaced
       value: 0
@@ -5874,6 +5886,10 @@ PrefabInstance:
       propertyPath: bulletPrefab
       value: 
       objectReference: {fileID: 7893370177717212354, guid: 3951992702f06c14b80360613a324b08, type: 3}
+    - target: {fileID: 9115287323416592300, guid: f24b36952b733ef479ef405343031bf7, type: 3}
+      propertyPath: bulletPrefab2
+      value: 
+      objectReference: {fileID: 4036459999960030016, guid: 4627c44ed10b5184ea186956400bf953, type: 3}
     - target: {fileID: 9115287323756519842, guid: f24b36952b733ef479ef405343031bf7, type: 3}
       propertyPath: m_InteractionManager
       value: 

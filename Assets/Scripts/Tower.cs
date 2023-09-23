@@ -6,6 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Tower : MonoBehaviour
 {
     public GameObject bulletPrefab;
+    public GameObject bulletPrefab2;
     public bool isPlaced;
     //public float bulletSpeed = 10f;
     public float cooldown = 1f; // Cooldown time in seconds
@@ -22,7 +23,18 @@ public class Tower : MonoBehaviour
         
         if (isPlaced && canShoot)
         {
-            ShootBullet();
+            if (this.gameObject.tag == "TurretA")
+            {
+                ShootBulletA();
+            }
+            if (this.gameObject.tag == "TurretB")
+            {
+                ShootBulletB();
+            }
+            if (this.gameObject.tag == "TurretC")
+            {
+                ShootBulletA();
+            }
             StartCoroutine(CooldownTimer());
         }
     }
@@ -40,12 +52,25 @@ public class Tower : MonoBehaviour
 
     }
 
-    public void ShootBullet()
+    public void ShootBulletA()
     {
         if (bulletPrefab != null && bulletSpawnPoint != null)
         {
             
             GameObject newBullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+            /*Rigidbody bulletRb = newBullet.GetComponent<Rigidbody>();
+            if (bulletRb != null)
+            {
+                bulletRb.velocity = bulletSpawnPoint.forward * bulletSpeed;
+            }*/
+        }
+    }
+    public void ShootBulletB()
+    {
+        if (bulletPrefab2 != null && bulletSpawnPoint != null)
+        {
+
+            GameObject newBullet2 = Instantiate(bulletPrefab2, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
             /*Rigidbody bulletRb = newBullet.GetComponent<Rigidbody>();
             if (bulletRb != null)
             {

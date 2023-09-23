@@ -69,36 +69,13 @@ public class SocketChecking : MonoBehaviour
     public void OnObjectExit()
     {
         IXRSelectInteractable obj = socket.GetOldestInteractableSelected();
-
         if (obj != null)
         {
             string tag = obj.transform.tag;
-            if (tag == "TurretA")
+            Tower tower = GetTowerComponent(tag);
+            if (tower != null)
             {
-                // Find and invoke the StartTowerAction on the object with tag "TurretA"
-                Tower towerA = GetTowerComponent("TurretA");
-                if (towerA != null)
-                {
-                    towerA.ExitTowerAction();
-                }
-            }
-            else if (tag == "TurretB")
-            {
-                // Find and invoke the StartTowerAction on the object with tag "TurretB"
-                Tower towerB = GetTowerComponent("TurretB");
-                if (towerB != null)
-                {
-                    towerB.ExitTowerAction();
-                }
-            }
-            else if (tag == "TurretC")
-            {
-                // Find and invoke the StartTowerAction on the object with tag "TurretC"
-                Tower towerC = GetTowerComponent("TurretC");
-                if (towerC != null)
-                {
-                    towerC.ExitTowerAction();
-                }
+                tower.ExitTowerAction();
             }
         }
     }
