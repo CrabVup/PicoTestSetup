@@ -298,10 +298,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7893370177717212354, guid: 3951992702f06c14b80360613a324b08, type: 3}
   isPlaced: 0
-  bulletSpeed: 10
-  cooldown: 1
+  cooldown: 0.5
   canShoot: 1
-  bulletSpawnPoint: {fileID: 9115287323416592299}
+  bulletSpawnPoint: {fileID: 9115287324581073245}
 --- !u!1 &9115287324155700994
 GameObject:
   m_ObjectHideFlags: 0

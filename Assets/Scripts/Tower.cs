@@ -6,7 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Tower : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    public bool isPlaced = false;
+    public bool isPlaced;
     //public float bulletSpeed = 10f;
     public float cooldown = 1f; // Cooldown time in seconds
     public bool canShoot = true; // Flag to check if shooting is allowed
@@ -19,7 +19,7 @@ public class Tower : MonoBehaviour
 
     void Update()
     {
-        if (isPlaced == true && canShoot)
+        if (isPlaced && canShoot)
         {
             ShootBullet();
             StartCoroutine(CooldownTimer());
@@ -27,15 +27,16 @@ public class Tower : MonoBehaviour
     }
     public void StartTowerAction()
     {
-
+        isPlaced = !isPlaced;
         Debug.Log("isPlaced");
-        isPlaced = true;
+       
     }
 
     public void ShootBullet()
     {
         if (bulletPrefab != null && bulletSpawnPoint != null)
         {
+            
             GameObject newBullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
             /*Rigidbody bulletRb = newBullet.GetComponent<Rigidbody>();
             if (bulletRb != null)
