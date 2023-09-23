@@ -1,50 +1,39 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CraftingSystem : MonoBehaviour
 {
-    public CraftingRecipeSO[] recipes;
+    public List<CraftingRecipeSO> craftingRecipesSOList;
+    public BoxCollider placeItemAreaBoxCollider;
+    private CraftingRecipeSO craftingRecipeSO;
 
-    public bool Craft(CraftingRecipeSO recipe)
+    private void Awake()
     {
-        // Check if the player has all the required input items for this recipe.
-        foreach (ItemSO inputItem in recipe.inputItemSOList)
+       
+    }
+    public void Craft()
+    {
+        Debug.Log("Craft");
+        Collider[] colliderArray = Physics.OverlapBox(
+                transform.position + placeItemAreaBoxCollider.center,
+                placeItemAreaBoxCollider.size,
+                placeItemAreaBoxCollider.transform.rotation);
+
+        List<ItemSO> inputItemList = new List<ItemSO>(craftingRecipeSO.inputItemSOList);
+        foreach (Collider collider in colliderArray)
         {
-            if (!InventoryContains(inputItem))
+            if (collider.TryGetComponent(out ItemSOHolder itemSOHolder))
             {
-                Debug.Log("Missing required item: " + inputItem.itemName);
-                return false; // Crafting failed
+                inputItemList.Remove(itemSOHolder.itemSO);
             }
         }
 
-        // Remove the input items from the player's inventory.
-        foreach (ItemSO inputItem in recipe.inputItemSOList)
+        if (inputItemList.Count == 0)
         {
-            RemoveItemFromInventory(inputItem);
+            Debug.Log("Yes");
+        }else
+        {
+            Debug.Log("No");
         }
-
-        // Add the output item to the player's inventory.
-        AddItemToInventory(recipe.outputItemSO);
-
-        Debug.Log("Crafted: " + recipe.outputItemSO.itemName);
-        return true; // Crafting successful
-    }
-
-    private bool InventoryContains(ItemSO item)
-    {
-        // Check if the player's inventory contains the specified item.
-        // You'll need to implement this method based on your inventory system.
-        return false;
-    }
-
-    private void RemoveItemFromInventory(ItemSO item)
-    {
-        // Remove the specified item from the player's inventory.
-        // You'll need to implement this method based on your inventory system.
-    }
-
-    private void AddItemToInventory(ItemSO item)
-    {
-        // Add the specified item to the player's inventory.
-        // You'll need to implement this method based on your inventory system.
     }
 }

@@ -6,6 +6,6 @@ using UnityEngine;
 public class ItemSO : ScriptableObject
 {
     // Define properties for your item, such as name, icon, description, etc.
-    public List<GameObject> itemName;
+    public GameObject itemName;
    
 }
