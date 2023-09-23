@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5807858967949297298}
   - component: {fileID: 5807858967949297389}
   - component: {fileID: 5807858967949297299}
-  - component: {fileID: 5807858967949297388}
+  - component: {fileID: 5503089545882224880}
   m_Layer: 0
   m_Name: TurretC
   m_TagString: TurretC
@@ -284,7 +284,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!114 &5807858967949297388
+--- !u!114 &5503089545882224880
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

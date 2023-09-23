@@ -19,6 +19,7 @@ public class Tower : MonoBehaviour
 
     void Update()
     {
+        
         if (isPlaced && canShoot)
         {
             ShootBullet();
@@ -27,9 +28,16 @@ public class Tower : MonoBehaviour
     }
     public void StartTowerAction()
     {
-        isPlaced = !isPlaced;
+        isPlaced = true;
         Debug.Log("isPlaced");
        
+    }
+
+    public void ExitTowerAction()
+    {
+        isPlaced = false;
+        Debug.Log("isOut");
+
     }
 
     public void ShootBullet()
@@ -54,4 +62,6 @@ public class Tower : MonoBehaviour
     }
 
     // Rest of your Tower script...
+
+   
 }

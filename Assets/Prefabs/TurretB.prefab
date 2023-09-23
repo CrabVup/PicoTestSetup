@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 3172533718982182643}
   - component: {fileID: 3172533718982182640}
   - component: {fileID: 3172533718982182642}
-  - component: {fileID: 3172533718982182641}
+  - component: {fileID: 947232589686530743}
   m_Layer: 0
   m_Name: TurretB
   m_TagString: TurretB
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!114 &3172533718982182641
+--- !u!114 &947232589686530743
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
