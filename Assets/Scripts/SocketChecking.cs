@@ -8,6 +8,7 @@ public class SocketChecking : MonoBehaviour
     XRSocketInteractor socket;
     public List<GameObject> turrets;
     private List<Tower> towerComponents = new List<Tower>();
+    private IXRSelectInteractable lastPlacedObject;
 
     void Start()
     {
@@ -22,12 +23,6 @@ public class SocketChecking : MonoBehaviour
                 towerComponents.Add(tower);
             }
         }
-    }
-
-    public void socketCheck()
-    {
-        IXRSelectInteractable objName = socket.GetOldestInteractableSelected();
-        Debug.Log(objName.transform.name + " in socket of " + transform.name);
     }
 
     public void OnObjectPlaced()
@@ -64,20 +59,26 @@ public class SocketChecking : MonoBehaviour
                     towerC.StartTowerAction();
                 }
             }
+                 lastPlacedObject = obj;
         }
     }
     public void OnObjectExit()
     {
-        IXRSelectInteractable obj = socket.GetOldestInteractableSelected();
-        if (obj != null)
+        if (lastPlacedObject != null)
         {
-            string tag = obj.transform.tag;
+            string tag = lastPlacedObject.transform.tag;
             Tower tower = GetTowerComponent(tag);
+
             if (tower != null)
             {
                 tower.ExitTowerAction();
             }
+
+            // Clear the reference to the last placed object
+            lastPlacedObject = null;
         }
+
+
     }
 
 
