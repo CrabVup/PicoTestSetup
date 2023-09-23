@@ -43,7 +43,7 @@ public class SocketChecking : MonoBehaviour
 
         if (obj.transform.tag == "TurretB")
         {
-           
+
             Debug.Log("B");
         }
 

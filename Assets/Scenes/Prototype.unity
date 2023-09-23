@@ -4901,6 +4901,18 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 2093769055}
+    - target: {fileID: 5807858967949297388, guid: 4c25b1bd1227c5a448a92b2c5b819a63, type: 3}
+      propertyPath: cooldown
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5807858967949297388, guid: 4c25b1bd1227c5a448a92b2c5b819a63, type: 3}
+      propertyPath: isPlaced
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5807858967949297388, guid: 4c25b1bd1227c5a448a92b2c5b819a63, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 7893370177717212354, guid: 3951992702f06c14b80360613a324b08, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c25b1bd1227c5a448a92b2c5b819a63, type: 3}
 --- !u!1001 &5232350057232393088
@@ -4983,6 +4995,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3172533718982182641, guid: b4365ee6445cd31419f18cfe3fdb2496, type: 3}
+      propertyPath: isPlaced
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172533718982182641, guid: b4365ee6445cd31419f18cfe3fdb2496, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 7893370177717212354, guid: 3951992702f06c14b80360613a324b08, type: 3}
     - target: {fileID: 3172533718982182642, guid: b4365ee6445cd31419f18cfe3fdb2496, type: 3}
       propertyPath: m_InteractionManager
       value: 
@@ -5092,6 +5112,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9115287323416592300, guid: f24b36952b733ef479ef405343031bf7, type: 3}
+      propertyPath: cooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115287323416592300, guid: f24b36952b733ef479ef405343031bf7, type: 3}
+      propertyPath: isPlaced
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115287323416592300, guid: f24b36952b733ef479ef405343031bf7, type: 3}
+      propertyPath: bulletSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115287323416592300, guid: f24b36952b733ef479ef405343031bf7, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 7893370177717212354, guid: 3951992702f06c14b80360613a324b08, type: 3}
     - target: {fileID: 9115287323756519842, guid: f24b36952b733ef479ef405343031bf7, type: 3}
       propertyPath: m_InteractionManager
       value: 
