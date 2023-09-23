@@ -6,10 +6,10 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Resource : MonoBehaviour
 {
     public List<GameObject> resources;
-    public GameObject target;
+    
     public bool isMatched1;
     public bool isMatched2;
-    public Transform SpawnPoint;
+  
 
     void Start()
     {
@@ -17,11 +17,7 @@ public class Resource : MonoBehaviour
     }
     void Update()
     {
-        if(isMatched1 && isMatched2)
-        {
-            Debug.Log("Call");
-            Invoke("Generate", 0f);
-        }
+       
     }
     public void ResourceAction1()
     {
@@ -36,9 +32,5 @@ public class Resource : MonoBehaviour
         Debug.Log("M2");
 
     }
-    public void Generate()
-    {
-        Debug.Log("Created");
-        GameObject newTarget = Instantiate(target, SpawnPoint.position, SpawnPoint.rotation);
-    }
+   
 }
