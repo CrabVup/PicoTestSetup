@@ -10,6 +10,7 @@ TagManager:
   - interactable
   - ResourceA
   - ResourceB
+  - Floor
   layers:
   - Default
   - TransparentFX

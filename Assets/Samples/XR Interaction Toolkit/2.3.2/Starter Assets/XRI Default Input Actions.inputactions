@@ -350,6 +350,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "ToggleJetpackAction",
+                    "type": "Value",
+                    "id": "b1d8f310-7d93-41eb-b30c-cfda84cc8183",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Move",
+                    "type": "PassThrough",
+                    "id": "ee25dd04-9f6a-4eaa-8662-3ee6f4a098ee",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -559,6 +577,28 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "Aim Flags",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "36858f88-9b57-4089-840a-2d58bd11667a",
+                    "path": "<XRController>{LeftHand}/triggerButton",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "Continuous Move",
+                    "action": "ToggleJetpackAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b3baab61-c619-47ba-b14b-7b4295d82a0a",
+                    "path": "<XRSimulatedController>{LeftHand}/primary2DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
