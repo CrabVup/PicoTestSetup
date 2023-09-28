@@ -1,39 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class Spawn : MonoBehaviour
 {
-    public GameObject Button;
-    public GameObject Fighter;
-    public GameObject Tower;
+    public GameObject enemyPrefab;
+    private float enemyInerval = 2f;
 
     void Start()
     {
-        
+        StartCoroutine(spawnEnemy(enemyInerval, enemyPrefab));
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator spawnEnemy(float interval, GameObject enemy)
     {
-        
-    }
-    public void SpawnFighter()
-    {
-        Vector3 pos = Button.transform.position;
-       // if()
-     //  {
-            Instantiate(Fighter, pos, Quaternion.identity);
-        //}
-       
-    }
-    public void SpawnTower()
-    {
-        Vector3 pos = Button.transform.position;
-       // if ()
-        //{
-            Instantiate(Tower, pos, Quaternion.identity);
-      //  }
+        yield return new WaitForSeconds(interval);
+        GameObject newEnemy = Instantiate(enemy, new Vector3(Random.Range(-1f, 1f), 0.5f, Random.Range(0, 2f)), Quaternion.identity);
+        StartCoroutine(spawnEnemy(interval, enemy));
     }
 }
