@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ZG : MonoBehaviour
 {
-    public float rotateSpeed;
-    public float turnSpeed;
-    public float downAndUpSpeed;
+    //public float rotateSpeed;
+    //public float turnSpeed;
+    //public float downAndUpSpeed;
     public float speed;
     public GameObject mainCamera; // Reference to the main camera.
 
@@ -26,7 +26,7 @@ public class ZG : MonoBehaviour
 
        //transform.Rotate(new Vector3(0, 0, -1) * rotateSpeed * Input.GetAxis("Roll") * Time.deltaTime);
         //transform.Rotate(new Vector3(1, 0, 0) * downAndUpSpeed * Input.GetAxis("UpDown") * Time.deltaTime);
-        transform.Rotate(new Vector3(0, 1, 0) * turnSpeed * Input.GetAxis("Horizontal") * Time.deltaTime);
+        //transform.Rotate(new Vector3(0, 1, 0) * turnSpeed * Input.GetAxis("Horizontal") * Time.deltaTime);
 
         // Check if a camera is assigned
         if (mainCamera != null)
