@@ -24,6 +24,10 @@ public class ZG : MonoBehaviour
             speed = 10;
         }
 
+        if (Input.GetButton("RightTrigger"))
+        {
+            Debug.Log("Yes!");
+        }
        //transform.Rotate(new Vector3(0, 0, -1) * rotateSpeed * Input.GetAxis("Roll") * Time.deltaTime);
         //transform.Rotate(new Vector3(1, 0, 0) * downAndUpSpeed * Input.GetAxis("UpDown") * Time.deltaTime);
         //transform.Rotate(new Vector3(0, 1, 0) * turnSpeed * Input.GetAxis("Horizontal") * Time.deltaTime);
