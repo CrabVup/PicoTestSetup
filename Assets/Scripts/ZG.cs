@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class ZG : MonoBehaviour
 {
-    //public float rotateSpeed;
-    //public float turnSpeed;
-    //public float downAndUpSpeed;
     public float speed;
-    public GameObject mainCamera; // Reference to the main camera.
-
+    public GameObject mainCamera;
     private Rigidbody rb;
+    private float maxSpeed = 10f; // Maximum allowed speed
 
     void Start()
     {
@@ -19,19 +16,6 @@ public class ZG : MonoBehaviour
 
     void Update()
     {
-        if (speed > 10)
-        {
-            speed = 10;
-        }
-
-        if (Input.GetButton("RightTrigger"))
-        {
-            Debug.Log("Yes!");
-        }
-       //transform.Rotate(new Vector3(0, 0, -1) * rotateSpeed * Input.GetAxis("Roll") * Time.deltaTime);
-        //transform.Rotate(new Vector3(1, 0, 0) * downAndUpSpeed * Input.GetAxis("UpDown") * Time.deltaTime);
-        //transform.Rotate(new Vector3(0, 1, 0) * turnSpeed * Input.GetAxis("Horizontal") * Time.deltaTime);
-
         // Check if a camera is assigned
         if (mainCamera != null)
         {
@@ -43,6 +27,18 @@ public class ZG : MonoBehaviour
 
             // Apply force in the camera's forward direction
             rb.AddForce(cameraForward * speed * Input.GetAxis("Vertical") * Time.deltaTime);
+
+            // Calculate the real speed
+            float realSpeed = rb.velocity.magnitude;
+
+            // Limit the real speed to a maximum value of 10
+            if (realSpeed > maxSpeed)
+            {
+                rb.velocity = rb.velocity.normalized * maxSpeed;
+            }
+
+            // Display the real speed
+            Debug.Log("Real Speed: " + realSpeed);
         }
         else
         {
