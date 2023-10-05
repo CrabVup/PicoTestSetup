@@ -29,7 +29,7 @@ public class SocketChecking : MonoBehaviour
     {
         IXRSelectInteractable obj = socket.GetOldestInteractableSelected();
 
-        if (obj != null)
+        /*if (obj != null)
         {
             string tag = obj.transform.tag;
             if (tag == "TurretA")
@@ -58,9 +58,18 @@ public class SocketChecking : MonoBehaviour
                 {
                     towerC.StartTowerAction();
                 }
+            }*/
+            if (tag == "InfoA")
+            {
+                // Find and invoke the StartTowerAction on the object with tag "TurretC"
+                Tower towerA = GetTowerComponent("InfoA");
+                if (towerA != null)
+                {
+                      towerA.StartTowerAction();
+                }
             }
-                 lastPlacedObject = obj;
-        }
+            lastPlacedObject = obj;
+        
     }
     public void OnObjectExit()
     {

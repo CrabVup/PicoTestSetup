@@ -1,27 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class Tower : MonoBehaviour
 {
-    public GameObject bulletPrefab;
+    /*public GameObject bulletPrefab;
     public GameObject bulletPrefab2;
     public bool isPlaced;
     //public float bulletSpeed = 10f;
     public float cooldown = 1f; // Cooldown time in seconds
     public bool canShoot = true; // Flag to check if shooting is allowed
-    public Transform bulletSpawnPoint;
+    public Transform bulletSpawnPoint;*/
+
+    public bool isPlaced;
+    public GameObject infoPanel;
+    public Scan scan;
+
 
     void Start()
     {
         //bulletSpawnPoint = transform.Find("BulletSpawnPoint"); // Assuming you have a child object for spawning bullets
+        infoPanel.SetActive(false);
     }
 
     void Update()
     {
-        
-        if (isPlaced && canShoot)
+        if (isPlaced && scan.currentValue == 100)
+        {
+            infoPanel.SetActive(true);
+        }
+       /* if (isPlaced && canShoot)
         {
             if (this.gameObject.tag == "TurretA")
             {
@@ -36,7 +46,7 @@ public class Tower : MonoBehaviour
                 ShootBulletA();
             }
             StartCoroutine(CooldownTimer());
-        }
+        }*/
     }
     public void StartTowerAction()
     {
@@ -52,7 +62,7 @@ public class Tower : MonoBehaviour
 
     }
 
-    public void ShootBulletA()
+   /* public void ShootBulletA()
     {
         if (bulletPrefab != null && bulletSpawnPoint != null)
         {
@@ -62,7 +72,7 @@ public class Tower : MonoBehaviour
             if (bulletRb != null)
             {
                 bulletRb.velocity = bulletSpawnPoint.forward * bulletSpeed;
-            }*/
+            }
         }
     }
     public void ShootBulletB()
@@ -75,7 +85,7 @@ public class Tower : MonoBehaviour
             if (bulletRb != null)
             {
                 bulletRb.velocity = bulletSpawnPoint.forward * bulletSpeed;
-            }*/
+            }
         }
     }
 
@@ -84,9 +94,9 @@ public class Tower : MonoBehaviour
         canShoot = false; // Prevent shooting during cooldown
         yield return new WaitForSeconds(cooldown);
         canShoot = true; // Allow shooting again after cooldown
-    }
+    }*/
 
-    // Rest of your Tower script...
+
 
    
 }
