@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class ZG : MonoBehaviour
 {
+    public float downAndUpSpeed;
     public float speed;
-    public GameObject mainCamera;
+    public GameObject mainCamera; // Reference to the main camera.
+
     private Rigidbody rb;
-    private float maxSpeed = 10f; // Maximum allowed speed
+
+    public Scan scan;
 
     void Start()
     {
@@ -16,29 +19,37 @@ public class ZG : MonoBehaviour
 
     void Update()
     {
+        
+
+        if (Input.GetButton("Fire1"))
+        {
+            scan.GetInfo();
+            Debug.Log("Yes!");
+        }
+
+        float upDownInput = Input.GetAxis("UpDown");
+
+        Vector3 upDownForce = Vector3.up * upDownInput * downAndUpSpeed;
+
+        rb.AddForce(upDownForce * Time.deltaTime);
+
         // Check if a camera is assigned
         if (mainCamera != null)
         {
-            // Get the camera's forward direction
             Vector3 cameraForward = mainCamera.transform.forward;
+            Vector3 cameraRight = mainCamera.transform.right;
 
-            // Normalize the forward direction
+            // Normalize the directions
             cameraForward.Normalize();
+            cameraRight.Normalize();
 
-            // Apply force in the camera's forward direction
-            rb.AddForce(cameraForward * speed * Input.GetAxis("Vertical") * Time.deltaTime);
+            // Calculate movement based on input axes
+            Vector3 moveDirection = (cameraForward * Input.GetAxis("Vertical") +
+                                     cameraRight * Input.GetAxis("Horizontal")).normalized;
 
-            // Calculate the real speed
-            float realSpeed = rb.velocity.magnitude;
+            // Apply force in the calculated direction
+            rb.AddForce(moveDirection * speed * Time.deltaTime);
 
-            // Limit the real speed to a maximum value of 10
-            if (realSpeed > maxSpeed)
-            {
-                rb.velocity = rb.velocity.normalized * maxSpeed;
-            }
-
-            // Display the real speed
-            Debug.Log("Real Speed: " + realSpeed);
         }
         else
         {

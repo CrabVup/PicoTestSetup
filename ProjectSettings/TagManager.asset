@@ -11,6 +11,8 @@ TagManager:
   - ResourceA
   - ResourceB
   - Floor
+  - VirusA
+  - InfoA
   layers:
   - Default
   - TransparentFX
