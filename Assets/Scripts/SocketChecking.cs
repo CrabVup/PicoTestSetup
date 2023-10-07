@@ -59,7 +59,17 @@ public class SocketChecking : MonoBehaviour
                     towerC.StartTowerAction();
                 }
             }*/
-            if (tag == "InfoA")
+        if (tag == "MarkerA")
+        {
+            // Find and invoke the StartTowerAction on the object with tag "TurretC"
+            Tower towerB = GetTowerComponent("MarkerA");
+            if (towerB != null)
+            {
+                towerB.StartTowerAction();
+            }
+        }
+
+        if (tag == "InfoA")
             {
                 // Find and invoke the StartTowerAction on the object with tag "TurretC"
                 Tower towerA = GetTowerComponent("InfoA");
@@ -73,6 +83,7 @@ public class SocketChecking : MonoBehaviour
     }
     public void OnObjectExit()
     {
+
         if (lastPlacedObject != null)
         {
             string tag = lastPlacedObject.transform.tag;
