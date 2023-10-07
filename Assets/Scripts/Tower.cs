@@ -30,6 +30,9 @@ public class Tower : MonoBehaviour
         if (isPlaced && scan.currentValue == 100)
         {
             infoPanel.SetActive(true);
+        }else
+        {
+            infoPanel.SetActive(false);
         }
        /* if (isPlaced && canShoot)
         {
