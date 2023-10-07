@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Scan : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class Scan : MonoBehaviour
     public Image scanningBar;
     public float fillSpeed = 1f; 
     public float currentValue = 0f;
+
+    public TMP_Text virusDescription;
     void Start()
     {
         notFinishedIcon.SetActive(false);
@@ -21,6 +24,11 @@ public class Scan : MonoBehaviour
   
     void Update()
     {
+        if (Input.GetButton("Fire3"))
+        {
+            currentValue = 0;
+            Debug.Log("222");
+        }
         if (isScanned == true)
         {
             notFinishedIcon.SetActive(true);
@@ -29,13 +37,26 @@ public class Scan : MonoBehaviour
             notFinishedIcon.SetActive(false);
         }
 
+        if (currentValue == 0)
+        {
+            finishedIcon.SetActive(false);
+            scanningBar.fillAmount = 0;
+
+        }
+
         if (currentValue == 100)
         {
             finishedIcon.SetActive(true);
             notFinishedIcon.SetActive(false);
         }
     }
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.TryGetComponent<Virus>(out Virus scannedVirus))
+        {
+            virusDescription.text = "Information\n" + (scannedVirus.GetInformation());
+        }
+    }
     private void OnTriggerStay(Collider other)
     {
           if (other.CompareTag("VirusA"))
@@ -59,4 +80,5 @@ public class Scan : MonoBehaviour
             scanningBar.fillAmount = currentValue / 100f;
         }
     }
+
 }
