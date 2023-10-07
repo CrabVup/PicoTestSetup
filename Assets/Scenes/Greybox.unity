@@ -5995,7 +5995,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853847393}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0bf296fc962d7184ab14ad1841598d5f, type: 3}
   m_Name: 
@@ -6104,8 +6104,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8c917d60c7db714a86cfd44e75fefc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  downAndUpSpeed: 10
-  speed: 10
+  downAndUpSpeed: 20
+  speed: 20
+  maxSpeed: 0.5
   mainCamera: {fileID: 64765833}
   scan: {fileID: 1930816440}
 --- !u!136 &1853847401

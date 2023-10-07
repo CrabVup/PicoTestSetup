@@ -6,6 +6,7 @@ public class ZG : MonoBehaviour
 {
     public float downAndUpSpeed;
     public float speed;
+    public float maxSpeed = 1.0f; // Maximum speed in units per second.
     public GameObject mainCamera; // Reference to the main camera.
 
     private Rigidbody rb;
@@ -19,8 +20,6 @@ public class ZG : MonoBehaviour
 
     void Update()
     {
-        
-
         if (Input.GetButton("Fire1"))
         {
             scan.GetInfo();
@@ -28,7 +27,6 @@ public class ZG : MonoBehaviour
         }
 
         float upDownInput = Input.GetAxis("UpDown");
-
         Vector3 upDownForce = Vector3.up * upDownInput * downAndUpSpeed;
 
         rb.AddForce(upDownForce * Time.deltaTime);
@@ -44,12 +42,17 @@ public class ZG : MonoBehaviour
             cameraRight.Normalize();
 
             // Calculate movement based on input axes
-            Vector3 moveDirection = (cameraForward * Input.GetAxis("Vertical") +
-                                     cameraRight * Input.GetAxis("Horizontal")).normalized;
+            Vector3 moveDirection = (cameraForward * Input.GetAxis("Vertical1") +
+                                     cameraRight * Input.GetAxis("Horizontal1")).normalized;
 
             // Apply force in the calculated direction
             rb.AddForce(moveDirection * speed * Time.deltaTime);
 
+            // Limit the maximum speed
+            if (rb.velocity.magnitude > maxSpeed)
+            {
+                rb.velocity = rb.velocity.normalized * maxSpeed;
+            }
         }
         else
         {
