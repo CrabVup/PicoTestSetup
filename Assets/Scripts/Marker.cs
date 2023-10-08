@@ -16,14 +16,14 @@ public class Marker : MonoBehaviour
      
    
     }
-    public void StartTowerAction()
+    public void StartAction()
     {
         isPlaced = true;
         Debug.Log("isPlaced");
 
     }
 
-    public void ExitTowerAction()
+    public void ExitAction()
     {
         isPlaced = false;
         Debug.Log("isOut");
