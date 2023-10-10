@@ -703,10 +703,13 @@ Camera:
   m_StereoSeparation: 0.022
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &67204015
 =======
 --- !u!114 &64765839
 =======
+=======
+>>>>>>> parent of a7070f2 (post-processing)
 --- !u!114 &64765839
 MonoBehaviour:
   m_ObjectHideFlags: 0
