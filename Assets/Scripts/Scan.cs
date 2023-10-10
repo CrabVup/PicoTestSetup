@@ -14,7 +14,10 @@ public class Scan : MonoBehaviour
     public float fillSpeed = 1f; 
     public float currentValue = 0f;
 
-    public TMP_Text virusDescription;
+    public TMP_Text virusDescription1;
+    public TMP_Text virusDescription2;
+    public TMP_Text virusDescription3;
+    public TMP_Text virusDescription4;
     void Start()
     {
         notFinishedIcon.SetActive(false);
@@ -54,7 +57,10 @@ public class Scan : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent<Virus>(out Virus scannedVirus))
         {
-            virusDescription.text = "Information\n" + (scannedVirus.GetInformation());
+            virusDescription1.text = "Information\n" + (scannedVirus.GetInformation());
+            virusDescription2.text = "Information\n" + (scannedVirus.GetInformation());
+            virusDescription3.text = "Information\n" + (scannedVirus.GetInformation());
+            virusDescription4.text = "Information\n" + (scannedVirus.GetInformation());
         }
     }
     private void OnTriggerStay(Collider other)
