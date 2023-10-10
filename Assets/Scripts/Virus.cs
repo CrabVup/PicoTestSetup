@@ -22,12 +22,4 @@ public class Virus : MonoBehaviour
     {
         return info;
     }
-
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("VirusA"))
-        {
-            Destroy(this.gameObject);
-        }
-    }
 }

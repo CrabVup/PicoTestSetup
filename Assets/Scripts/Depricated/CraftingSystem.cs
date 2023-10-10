@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 
 public class CraftingSystem : MonoBehaviour
@@ -13,15 +12,6 @@ public class CraftingSystem : MonoBehaviour
     private void Awake()
     {
         NextRecipe();
-    }
-
-    void Update()
-    {
-        if (Input.GetButton("Fire3"))
-        {
-            Craft();
-            Debug.Log("Yes!");
-        }
     }
     private void OnTriggerStay(Collider other)
     {
