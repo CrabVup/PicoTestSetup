@@ -1468,7 +1468,11 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
+<<<<<<< HEAD
     value: 672.08
+=======
+    value: 100
+>>>>>>> parent of 841097d (Revert "Merge branch 'main' of https://github.com/edgehog6/PicoTestSetup")
   threshold:
     overrideState: 1
     value: 1
