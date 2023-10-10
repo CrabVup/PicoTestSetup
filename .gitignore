@@ -72,3 +72,5 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 Assets/Animation/door.controller.meta
 Assets/Scenes/Greybox.unity
+*.unity
+*.meta
