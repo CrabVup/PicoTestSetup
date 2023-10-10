@@ -15,6 +15,7 @@ TagManager:
   - InfoA
   - MarkerA
   - MarkerB
+  - MarkerC
   layers:
   - Default
   - TransparentFX

@@ -55,14 +55,17 @@ public class Scan : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.TryGetComponent<Virus>(out Virus scannedVirus))
-        {
-            virusDescription1.text = "Information\n" + (scannedVirus.GetInformation());
-            virusDescription2.text = "Information\n" + (scannedVirus.GetInformation());
-            virusDescription3.text = "Information\n" + (scannedVirus.GetInformation());
-            virusDescription4.text = "Information\n" + (scannedVirus.GetInformation());
-        }
+       
+            
+    if (other.gameObject.TryGetComponent<Virus>(out Virus scannedVirus))
+    {
+        virusDescription1.text = "Encode\n: " + scannedVirus.GetEncode();
+            virusDescription2.text = "Lifetime\n: " + scannedVirus.GetLifetime();
+            virusDescription3.text = "Amount\n: " + scannedVirus.GetSize();
+        virusDescription4.text = "Infectivity\n: " + scannedVirus.GetInfectivity();
     }
+    }
+    
     private void OnTriggerStay(Collider other)
     {
           if (other.CompareTag("VirusA"))

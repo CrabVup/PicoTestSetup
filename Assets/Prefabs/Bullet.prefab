@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7893370177717212352}
   - component: {fileID: 7893370177717212355}
   - component: {fileID: -3398312123665993581}
+  - component: {fileID: 2602522224856070568}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -128,4 +129,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  cooldown: 1
+  canShoot: 1
   tower: {fileID: 0}
+--- !u!114 &2602522224856070568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7893370177717212354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c17daede8e79fc4199599dba4b3b3f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+    Encode: s
+    Lifetime: ss
+    Size: 221
+    Infectivity: fsa

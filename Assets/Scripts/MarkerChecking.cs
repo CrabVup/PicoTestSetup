@@ -54,6 +54,7 @@ public class MarkerChecking : MonoBehaviour
             }
         }
 
+
         lastPlacedObject = obj;
 
     }

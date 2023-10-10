@@ -6,21 +6,39 @@ using System;
 [Serializable]
 public struct VirusInfo
 {
-    public string Name;
-    public string Gender;
-    public float Size;
+    public string Encode;
+    public string Lifetime;
+    public string Amount;
+    public string Infectivity;
+
     public override string ToString()
     {
-            return $"name {Name}, size: {Size}, gender: {Gender}";  
+        return $"Encode: {Encode}, Lifetime: {Lifetime}, Amount: {Amount}, Infectivity: {Infectivity}";
     }
 }
+
 public class Virus : MonoBehaviour
 {
     [SerializeField]
     public VirusInfo info;
-    public VirusInfo GetInformation()
+
+    public string GetEncode()
     {
-        return info;
+        return info.Encode;
+    }
+    public string GetLifetime()
+    {
+        return info.Lifetime;
+    }
+
+    public string GetSize()
+    {
+        return info.Amount;
+    }
+
+    public string GetInfectivity()
+    {
+        return info.Infectivity;
     }
 
     public void OnTriggerEnter(Collider other)
