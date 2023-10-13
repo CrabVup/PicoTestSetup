@@ -45,8 +45,8 @@ public class ZG : MonoBehaviour
             Vector3 moveDirection = (cameraForward * Input.GetAxis("Vertical1") +
                                      cameraRight * Input.GetAxis("Horizontal1")).normalized;
 
-            // Apply force in the calculated direction
-            rb.AddForce(moveDirection * speed * Time.deltaTime);
+        // Apply force in the calculated direction
+        rb.AddForce(moveDirection * speed * Time.deltaTime);
 
             // Limit the maximum speed
             if (rb.velocity.magnitude > maxSpeed)
