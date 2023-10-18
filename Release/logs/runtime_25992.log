@@ -1,0 +1,4 @@
+[2023-10-18 11:00:12.968] [pxr_streamer] [info] ***********  Log Begin **********
+[2023-10-18 11:00:12.969] [pxr_streamer] [info] process id= 25992
+[2023-10-18 11:00:12.969] [pxr_streamer] [debug] single_application.cpp:94 IsRunning: app is running, num= 2
+[2023-10-18 11:00:12.969] [pxr_streamer] [error] main.cpp:42 main: runtime force quit
