@@ -17,7 +17,17 @@ MonoBehaviour:
     - _MixedRealityToolkit_Editor_IgnoreSettingsPrompts
     - _MixedRealityToolkit_Editor_LockProfiles
     - MixedRealityToolkit_Editor_RunOptimalConfig
+<<<<<<< Updated upstream
     values: 010101
+=======
+<<<<<<< HEAD
+    - _MixedRealityToolkit_Editor_AutoEnableUWPCapabilities
+    - MixedRealityToolkit_Editor_NullDataProviders
+    values: 0001010100
+=======
+    values: 010101
+>>>>>>> 3bcc34dded8f60dba3f2667fe3e2cdb04f6d0ad2
+>>>>>>> Stashed changes
   intPreferences:
     keys:
     - _MixedRealityToolkit_Editor_ConfiguratorState

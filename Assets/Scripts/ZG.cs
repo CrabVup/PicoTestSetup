@@ -1,6 +1,10 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEditor.XR.LegacyInputHelpers;
+using UnityEngine.XR;
+using UnityEngine.InputSystem;
 
 public class ZG : MonoBehaviour
 {
@@ -9,11 +13,25 @@ public class ZG : MonoBehaviour
     public float speed;
     public float maxSpeed = 1.0f; // Maximum speed in units per second.
 
+<<<<<<< Updated upstream
     public GameObject mainCamera;    // Reference to the main camera.
+=======
+    [Header("XR Tolkit Parts")]
+    public ARSessionOrigin xrOrigin;
+    public GameObject mainCamera; // Reference to the main camera.
+>>>>>>> Stashed changes
+
+    [Header("Hexabody Parts")]
+    public GameObject Head;
+    public GameObject Chest;
+    public GameObject Fender;
+    public GameObject Monoball;
 
     private Rigidbody rb;
 
-    public Scan scan;
+    //public Scan scan;
+
+    private Quaternion headYaw;
 
     void Start()
     {
@@ -63,5 +81,31 @@ public class ZG : MonoBehaviour
         {
             Debug.LogWarning("Main camera is not assigned!");
         }
+
+        // Hexab0dy
+
+        XRRigToPlayer();
+
     }
+
+    private void FixedUpdate()
+    {
+        rotatePlayer();
+    }
+
+    private void XRRigToPlayer()
+    {
+        XRRig.transform.position = new Vector3(Fender.transform.position.x, Fender.transform.position.y - (0.5f * Fender.transform.localScale.y + 0.5f * Monoball.transform.localScale.y), Fender.transform.position.z);
+
+    }
+
+    private void rotatePlayer()
+    {
+        Chest.transform.rotation = headYaw;
+    }
+<<<<<<< Updated upstream
 }
+=======
+}
+*/
+>>>>>>> Stashed changes
