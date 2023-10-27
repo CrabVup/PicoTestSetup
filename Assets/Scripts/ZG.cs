@@ -44,7 +44,7 @@ public class ZG : MonoBehaviour
             cameraRight.Normalize();
 
             // Get Controllers Input
-            headYaw = Quaternion.Euler(0, xrOrigin.cameraGameObject.transform.eulerAngles.y, 0); // set the head to the camera's rotation on the y axis
+           // headYaw = Quaternion.Euler(0, xrOrigin.cameraGameObject.transform.eulerAngles.y, 0); // set the head to the camera's rotation on the y axis
 
             // Calculate movement based on input axes
             Vector3 moveDirection = (cameraForward * Input.GetAxis("Vertical1") +

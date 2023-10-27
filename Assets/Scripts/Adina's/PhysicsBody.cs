@@ -28,12 +28,12 @@ public class PhysicsBody : MonoBehaviour
 
     private Quaternion headYaw;
 
-    private Camera cameraObject;
+   // private Camera cameraObject;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        cameraObject = xrOrigin.GetComponent<XRManager>().camera;
+     //   cameraObject = xrOrigin.GetComponent<XRManager>().camera;
     }
 
     void Update()
@@ -54,7 +54,7 @@ public class PhysicsBody : MonoBehaviour
             cameraRight.Normalize();
 
             // Get Controllers Input
-            headYaw = Quaternion.Euler(0, xrOrigin.cameraGameObject.transform.eulerAngles.y, 0); // set the head to the camera's rotation on the y axis
+          //  headYaw = Quaternion.Euler(0, xrOrigin.cameraGameObject.transform.eulerAngles.y, 0); // set the head to the camera's rotation on the y axis
 
             // Calculate movement based on input axes
             Vector3 moveDirection = (cameraForward * Input.GetAxis("Vertical1") +
@@ -87,7 +87,7 @@ public class PhysicsBody : MonoBehaviour
 
     private void XRRigToPlayer()
     {
-        XRRig.transform.position = new Vector3(Fender.transform.position.x, Fender.transform.position.y - (0.5f * Fender.transform.localScale.y + 0.5f * Monoball.transform.localScale.y), Fender.transform.position.z);
+      //  XRRig.transform.position = new Vector3(Fender.transform.position.x, Fender.transform.position.y - (0.5f * Fender.transform.localScale.y + 0.5f * Monoball.transform.localScale.y), Fender.transform.position.z);
 
     }
 
