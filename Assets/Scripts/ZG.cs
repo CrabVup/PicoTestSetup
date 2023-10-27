@@ -14,6 +14,7 @@ public class ZG : MonoBehaviour
     public float maxSpeed = 1.0f; // Maximum speed in units per second.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     public GameObject mainCamera;    // Reference to the main camera.
 =======
@@ -21,6 +22,11 @@ public class ZG : MonoBehaviour
     public ARSessionOrigin xrOrigin;
     public GameObject mainCamera; // Reference to the main camera.
 >>>>>>> Stashed changes
+=======
+    [Header("XR Tolkit Parts")]
+    public ARSessionOrigin xrOrigin;
+    public GameObject mainCamera; // Reference to the main camera.
+>>>>>>> parent of 65aed61 (ModifiedScripts)
 =======
     [Header("XR Tolkit Parts")]
     public ARSessionOrigin xrOrigin;
@@ -110,12 +116,17 @@ public class ZG : MonoBehaviour
         Chest.transform.rotation = headYaw;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 }
 =======
 }
 */
 
+=======
+}
+*/
+>>>>>>> parent of 65aed61 (ModifiedScripts)
 =======
 }
 */
