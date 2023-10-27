@@ -7,7 +7,7 @@ using UnityEngine.XR;
 using UnityEngine.InputSystem;
 using Unity.XR.CoreUtils;
 
-public class PhysicsBody : MonoBehaviour
+/*public class PhysicsBody : MonoBehaviour
 {
     [Header("Movement")]
     public float downAndUpSpeed;
@@ -95,4 +95,4 @@ public class PhysicsBody : MonoBehaviour
     {
         Chest.transform.rotation = headYaw;
     }
-}
+}*/
