@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -97,9 +97,6 @@ public class ZG : MonoBehaviour
             cameraForward.Normalize();
             cameraRight.Normalize();
 
-            // Get Controllers Input
-            headYaw = Quaternion.Euler(0, xrOrigin.cameraGameObject.transform.eulerAngles.y, 0); // set the head to the camera's rotation on the y axis
-
             // Calculate movement based on input axes
             Vector3 moveDirection = (cameraForward * Input.GetAxis("Vertical1") +
                                      cameraRight * Input.GetAxis("Horizontal1")).normalized;
@@ -149,29 +146,30 @@ public class ZG : MonoBehaviour
 }
 =======
 }
-*/
+
 
 =======
 }
-*/
+
 >>>>>>> parent of 65aed61 (ModifiedScripts)
 =======
 }
-*/
+
 >>>>>>> parent of 65aed61 (ModifiedScripts)
 =======
 }
-*/
+
 >>>>>>> parent of 65aed61 (ModifiedScripts)
 =======
 }
-*/
+
 >>>>>>> parent of 65aed61 (ModifiedScripts)
 =======
 }
-*/
+
 >>>>>>> parent of 65aed61 (ModifiedScripts)
 =======
 }
-*/
+
 >>>>>>> parent of 65aed61 (ModifiedScripts)
+*/
