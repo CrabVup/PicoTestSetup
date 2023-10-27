@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -16,6 +16,7 @@ public class ZG : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     public GameObject mainCamera;    // Reference to the main camera.
 =======
@@ -23,6 +24,11 @@ public class ZG : MonoBehaviour
     public ARSessionOrigin xrOrigin;
     public GameObject mainCamera; // Reference to the main camera.
 >>>>>>> Stashed changes
+=======
+    [Header("XR Tolkit Parts")]
+    public ARSessionOrigin xrOrigin;
+    public GameObject mainCamera; // Reference to the main camera.
+>>>>>>> parent of 65aed61 (ModifiedScripts)
 =======
     [Header("XR Tolkit Parts")]
     public ARSessionOrigin xrOrigin;
@@ -124,12 +130,17 @@ public class ZG : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 }
 =======
 }
 */
 
+=======
+}
+*/
+>>>>>>> parent of 65aed61 (ModifiedScripts)
 =======
 }
 */
