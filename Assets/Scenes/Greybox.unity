@@ -7098,7 +7098,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 256
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: 799f7177405ce034d823e8759c9d592a, type: 2}
+  m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 1
   m_TargetEye: 3
   m_HDR: 1
@@ -12006,8 +12006,8 @@ GameObject:
   - component: {fileID: 1853847397}
   - component: {fileID: 1853847396}
   - component: {fileID: 1853847395}
+  - component: {fileID: 1853847404}
   - component: {fileID: 1853847394}
-  - component: {fileID: 1853847400}
   - component: {fileID: 1853847403}
   - component: {fileID: 1853847402}
   - component: {fileID: 1853847401}
@@ -12160,23 +12160,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
---- !u!114 &1853847400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853847393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8c917d60c7db714a86cfd44e75fefc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  downAndUpSpeed: 150
-  speed: 150
-  maxSpeed: 1
-  mainCamera: {fileID: 64765833}
-  scan: {fileID: 1930816440}
 --- !u!136 &1853847401
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12225,6 +12208,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!114 &1853847404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853847393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c917d60c7db714a86cfd44e75fefc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  downAndUpSpeed: 20
+  speed: 20
+  maxSpeed: 10
+  mainCamera: {fileID: 64765833}
+  scan: {fileID: 1930816440}
 --- !u!1 &1858219407
 GameObject:
   m_ObjectHideFlags: 0

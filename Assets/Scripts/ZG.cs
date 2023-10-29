@@ -1,4 +1,4 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -13,65 +13,53 @@ public class ZG : MonoBehaviour
     public float speed;
     public float maxSpeed = 1.0f; // Maximum speed in units per second.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< Updated upstream
+
     public GameObject mainCamera;    // Reference to the main camera.
-=======
-    [Header("XR Tolkit Parts")]
-    public ARSessionOrigin xrOrigin;
-    public GameObject mainCamera; // Reference to the main camera.
->>>>>>> Stashed changes
-=======
-    [Header("XR Tolkit Parts")]
-    public ARSessionOrigin xrOrigin;
-    public GameObject mainCamera; // Reference to the main camera.
->>>>>>> parent of 65aed61 (ModifiedScripts)
-=======
-    [Header("XR Tolkit Parts")]
-    public ARSessionOrigin xrOrigin;
-    public GameObject mainCamera; // Reference to the main camera.
->>>>>>> parent of 65aed61 (ModifiedScripts)
-=======
-    [Header("XR Tolkit Parts")]
-    public ARSessionOrigin xrOrigin;
-    public GameObject mainCamera; // Reference to the main camera.
->>>>>>> parent of 65aed61 (ModifiedScripts)
-=======
-    [Header("XR Tolkit Parts")]
-    public ARSessionOrigin xrOrigin;
-    public GameObject mainCamera; // Reference to the main camera.
->>>>>>> parent of 65aed61 (ModifiedScripts)
-=======
-    [Header("XR Tolkit Parts")]
-    public ARSessionOrigin xrOrigin;
-    public GameObject mainCamera; // Reference to the main camera.
->>>>>>> parent of 65aed61 (ModifiedScripts)
-=======
-    [Header("XR Tolkit Parts")]
-    public ARSessionOrigin xrOrigin;
-    public GameObject mainCamera; // Reference to the main camera.
->>>>>>> parent of 65aed61 (ModifiedScripts)
 
-    [Header("Hexabody Parts")]
-    public GameObject Head;
-    public GameObject Chest;
-    public GameObject Fender;
-    public GameObject Monoball;
+    /* [Header("XR Tolkit Parts")]
+     public ARSessionOrigin xrOrigin;
+     public GameObject mainCamera; // Reference to the main camera.
 
-    private Rigidbody rb;
+     [Header("XR Tolkit Parts")]
+     public ARSessionOrigin xrOrigin;
+     public GameObject mainCamera; // Reference to the main camera.
 
-    //public Scan scan;
+     [Header("XR Tolkit Parts")]
+     public ARSessionOrigin xrOrigin;
+     public GameObject mainCamera; // Reference to the main camera.
+
+     [Header("XR Tolkit Parts")]
+     public ARSessionOrigin xrOrigin;
+     public GameObject mainCamera; // Reference to the main camera.
+
+     [Header("XR Tolkit Parts")]
+     public ARSessionOrigin xrOrigin;
+     public GameObject mainCamera; // Reference to the main camera.
+
+     [Header("XR Tolkit Parts")]
+     public ARSessionOrigin xrOrigin;
+     public GameObject mainCamera; // Reference to the main camera.
+
+     [Header("XR Tolkit Parts")]
+     public ARSessionOrigin xrOrigin;
+     public GameObject mainCamera; // Reference to the main camera.
+
+
+     [Header("Hexabody Parts")]
+     public GameObject Head;
+     public GameObject Chest;
+     public GameObject Fender;
+     public GameObject Monoball;
+
+     private Rigidbody rb;*/
+
+    public Scan scan;
 
     private Quaternion headYaw;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -85,7 +73,7 @@ public class ZG : MonoBehaviour
         float upDownInput = Input.GetAxis("UpDown");
         Vector3 upDownForce = Vector3.up * upDownInput * downAndUpSpeed;
 
-        rb.AddForce(upDownForce * Time.deltaTime);
+        //    rb.AddForce(upDownForce * Time.deltaTime);
 
         // Check if a camera is assigned
         if (mainCamera != null)
@@ -100,9 +88,12 @@ public class ZG : MonoBehaviour
             // Calculate movement based on input axes
             Vector3 moveDirection = (cameraForward * Input.GetAxis("Vertical1") +
                                      cameraRight * Input.GetAxis("Horizontal1")).normalized;
+        }
+    }
+}
 
         // Apply force in the calculated direction
-        rb.AddForce(moveDirection * speed * Time.deltaTime);
+       /* rb.AddForce(moveDirection * speed * Time.deltaTime);
 
             // Limit the maximum speed
             if (rb.velocity.magnitude > maxSpeed)
@@ -135,41 +126,4 @@ public class ZG : MonoBehaviour
     private void rotatePlayer()
     {
         Chest.transform.rotation = headYaw;
-    }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-}
-=======
-}
-
-
-=======
-}
-
->>>>>>> parent of 65aed61 (ModifiedScripts)
-=======
-}
-
->>>>>>> parent of 65aed61 (ModifiedScripts)
-=======
-}
-
->>>>>>> parent of 65aed61 (ModifiedScripts)
-=======
-}
-
->>>>>>> parent of 65aed61 (ModifiedScripts)
-=======
-}
-
->>>>>>> parent of 65aed61 (ModifiedScripts)
-=======
-}
-
->>>>>>> parent of 65aed61 (ModifiedScripts)
-*/
+    }*/
