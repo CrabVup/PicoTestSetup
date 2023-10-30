@@ -7,11 +7,12 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pink
+  m_Name: Red 1
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _EMISSION
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
@@ -106,12 +107,12 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.21698111, g: 0.05424528, b: 0.07994047, a: 0.87058824}
-    - _Color: {r: 0.21698105, g: 0.054245256, b: 0.079940446, a: 0.87058824}
-    - _EmissionColor: {r: 0.2264151, g: 0.06066215, b: 0.06066215, a: 1}
-    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _BaseColor: {r: 0.46226418, g: 0.0283464, b: 0.0283464, a: 1}
+    - _Color: {r: 0.46226412, g: 0.0283464, b: 0.0283464, a: 1}
+    - _EmissionColor: {r: 0.70710677, g: 0.01000621, b: 0.01000621, a: 1}
+    - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &6234940540629977316
+--- !u!114 &3268580608831215225
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
