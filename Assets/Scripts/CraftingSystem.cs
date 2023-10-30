@@ -17,7 +17,7 @@ public class CraftingSystem : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButton("Fire3"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Craft();
             Debug.Log("Yes!");

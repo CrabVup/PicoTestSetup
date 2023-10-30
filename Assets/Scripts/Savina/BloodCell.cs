@@ -38,7 +38,7 @@ public class BloodCell : MonoBehaviour
         transform.Rotate(rotationAxis, rotationSpeed * Time.deltaTime);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
         Destroy(this.gameObject);
     }

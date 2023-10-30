@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSpeed: 5
   maxSpeed: 20
-  maxRotationSpeed: 80
+  maxRotationSpeed: 100
 --- !u!65 &3163902530199783511
 BoxCollider:
   m_ObjectHideFlags: 0
