@@ -17,11 +17,7 @@ public class CraftingSystem : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Craft();
-            Debug.Log("Yes!");
-        }
+        
     }
     private void OnTriggerStay(Collider other)
     {

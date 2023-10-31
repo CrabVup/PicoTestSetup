@@ -5,8 +5,9 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class ButtonPush : MonoBehaviour
 {
-    public Animator animator;
-   // public string boolName = "open";
+    // public Animator animator;
+    // public string boolName = "open";
+    public CraftingSystem craftSystem;
     void Start()
     {
         GetComponent<XRSimpleInteractable>().selectEntered.AddListener(x => ToggleDoorOpen());
@@ -19,7 +20,11 @@ public class ButtonPush : MonoBehaviour
 
     public void ToggleDoorOpen()
     {
-        bool isOpen = animator.GetBool("open");
-        animator.SetBool("open", !isOpen);
+        // bool isOpen = animator.GetBool("open");
+        // animator.SetBool("open", !isOpen);
+       
+            craftSystem.Craft();
+            Debug.Log("Yes!");
+     
     }
 }
