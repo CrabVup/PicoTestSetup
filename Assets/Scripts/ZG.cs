@@ -21,6 +21,8 @@ public class ZG : MonoBehaviour
 
     public GameObject scanVFX;
     public GameObject scanVFX2;
+    public ContinuousMoveProviderBase movementScript;
+    public BoxCollider stationCollider;
 
     void Start()
     {
@@ -81,7 +83,29 @@ public class ZG : MonoBehaviour
             Debug.LogWarning("Main camera is not assigned!");
         }
     }
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other == stationCollider.GetComponent<Collider>())
+        {
+            rb.useGravity = true;
+            movementScript.enabled = true; // Disable the script.
+            maxSpeed = 0;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other == stationCollider.GetComponent<Collider>())
+        {
+            rb.useGravity = false;
+            movementScript.enabled = false; 
+            maxSpeed = 10;
+            //rb.velocity = new Vector3(0, 0, 0);
+        }
+    }
+
+
 }
 
-       
+
