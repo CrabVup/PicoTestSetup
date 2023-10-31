@@ -12,7 +12,7 @@ public class CraftingSystem : MonoBehaviour
 
     private void Awake()
     {
-        NextRecipe();
+        //NextRecipe();
     }
     private void Start()
     {
@@ -21,7 +21,7 @@ public class CraftingSystem : MonoBehaviour
    
     void Update()
     {
-        
+        NextRecipe();
     }
     private void OnTriggerStay(Collider other)
     {
@@ -30,7 +30,7 @@ public class CraftingSystem : MonoBehaviour
     }
     public void NextRecipe()
     {
-        
+      
             int index = craftingRecipeSOList.IndexOf(craftingRecipeSO);
             index = (index + 1) % craftingRecipeSOList.Count;
             craftingRecipeSO = craftingRecipeSOList[index];
@@ -39,6 +39,7 @@ public class CraftingSystem : MonoBehaviour
     }
     public void Craft()
     {
+        
         Debug.Log("Craft");
         Collider[] colliderArray = Physics.OverlapBox(
                 transform.position + placeItemAreaBoxCollider.center,
@@ -47,12 +48,18 @@ public class CraftingSystem : MonoBehaviour
 
 
         List<ItemSO> inputItemList = new List<ItemSO>(craftingRecipeSO.inputItemSOList);
+        List<GameObject> consumeItemGameObjectList = new List<GameObject>();
         foreach (Collider collider in colliderArray)
         {
             if (collider.TryGetComponent(out ItemSOHolder itemSOHolder))
             {
-                Debug.Log("Found item: " + itemSOHolder.itemSO.itemName);
-                inputItemList.Remove(itemSOHolder.itemSO);
+                if (inputItemList.Contains(itemSOHolder.itemSO))
+                {
+                    Debug.Log("Found item: " + itemSOHolder.itemSO.itemName);
+                    inputItemList.Remove(itemSOHolder.itemSO);
+                    consumeItemGameObjectList.Add(collider.gameObject);
+                }
+  
             }
         }
 
@@ -60,9 +67,12 @@ public class CraftingSystem : MonoBehaviour
         {
             Debug.Log("Yes");
             Instantiate(craftingRecipeSO.outputItemSO, itemSpawnPoint.position, itemSpawnPoint.rotation);
-        }else
-        {
-            Debug.Log("No");
+            //Instantiate(craftingVFX, itemSpawnPoint.position, itemSpawnPoint.rotation);
+            foreach (GameObject consumeItemGameObject in consumeItemGameObjectList)
+            {
+                Destroy(consumeItemGameObject);
+            }
         }
+      
     }
 }

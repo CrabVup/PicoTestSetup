@@ -22,8 +22,8 @@ public class ButtonPush : MonoBehaviour
     {
         // bool isOpen = animator.GetBool("open");
         // animator.SetBool("open", !isOpen);
-        craftSystem.NextRecipe();
-        craftSystem.Craft();
+       
+      //  craftSystem.Craft();
             Debug.Log("Yes!");
      
     }
