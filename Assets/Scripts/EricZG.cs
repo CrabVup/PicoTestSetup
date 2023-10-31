@@ -18,9 +18,7 @@ public class EricZG : MonoBehaviour
 
     public Rigidbody rb;
 
-    public Scan scan;
-
-    private Quaternion headYaw;
+    public Scan scan;   
 
     void Start()
     {
