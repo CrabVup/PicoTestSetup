@@ -13,53 +13,20 @@ public class ZG : MonoBehaviour
     public float speed;
     public float maxSpeed = 1.0f; // Maximum speed in units per second.
 
-
     public GameObject mainCamera;    // Reference to the main camera.
 
-    /* [Header("XR Tolkit Parts")]
-     public ARSessionOrigin xrOrigin;
-     public GameObject mainCamera; // Reference to the main camera.
-
-     [Header("XR Tolkit Parts")]
-     public ARSessionOrigin xrOrigin;
-     public GameObject mainCamera; // Reference to the main camera.
-
-     [Header("XR Tolkit Parts")]
-     public ARSessionOrigin xrOrigin;
-     public GameObject mainCamera; // Reference to the main camera.
-
-     [Header("XR Tolkit Parts")]
-     public ARSessionOrigin xrOrigin;
-     public GameObject mainCamera; // Reference to the main camera.
-
-     [Header("XR Tolkit Parts")]
-     public ARSessionOrigin xrOrigin;
-     public GameObject mainCamera; // Reference to the main camera.
-
-     [Header("XR Tolkit Parts")]
-     public ARSessionOrigin xrOrigin;
-     public GameObject mainCamera; // Reference to the main camera.
-
-     [Header("XR Tolkit Parts")]
-     public ARSessionOrigin xrOrigin;
-     public GameObject mainCamera; // Reference to the main camera.
-
-
-     [Header("Hexabody Parts")]
-     public GameObject Head;
-     public GameObject Chest;
-     public GameObject Fender;
-     public GameObject Monoball;
-
-     private Rigidbody rb;*/
+     private Rigidbody rb;
 
     public Scan scan;
 
-    private Quaternion headYaw;
+    public GameObject scanVFX;
+    public GameObject scanVFX2;
 
     void Start()
     {
-        //rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
+        scanVFX.SetActive(false);
+        scanVFX2.SetActive(false);
     }
 
     void Update()
@@ -68,12 +35,24 @@ public class ZG : MonoBehaviour
         {
             scan.GetInfo();
             Debug.Log("Yes!");
+            if (scan.isScanned)
+            {
+                scanVFX.SetActive(true);
+            }else
+            {
+                scanVFX2.SetActive(true);
+            }
+
+        }else
+        {
+            scanVFX.SetActive(false);
+            scanVFX2.SetActive(false);
         }
 
         float upDownInput = Input.GetAxis("UpDown");
         Vector3 upDownForce = Vector3.up * upDownInput * downAndUpSpeed;
 
-        //    rb.AddForce(upDownForce * Time.deltaTime);
+       rb.AddForce(upDownForce * Time.deltaTime);
 
         // Check if a camera is assigned
         if (mainCamera != null)
@@ -88,12 +67,8 @@ public class ZG : MonoBehaviour
             // Calculate movement based on input axes
             Vector3 moveDirection = (cameraForward * Input.GetAxis("Vertical1") +
                                      cameraRight * Input.GetAxis("Horizontal1")).normalized;
-        }
-    }
-}
 
-        // Apply force in the calculated direction
-       /* rb.AddForce(moveDirection * speed * Time.deltaTime);
+            rb.AddForce(moveDirection * speed * Time.deltaTime);
 
             // Limit the maximum speed
             if (rb.velocity.magnitude > maxSpeed)
@@ -105,25 +80,8 @@ public class ZG : MonoBehaviour
         {
             Debug.LogWarning("Main camera is not assigned!");
         }
-
-        // Hexab0dy
-
-        XRRigToPlayer();
-
     }
+    
+}
 
-    private void FixedUpdate()
-    {
-        rotatePlayer();
-    }
-
-    private void XRRigToPlayer()
-    {
-        XRRig.transform.position = new Vector3(Fender.transform.position.x, Fender.transform.position.y - (0.5f * Fender.transform.localScale.y + 0.5f * Monoball.transform.localScale.y), Fender.transform.position.z);
-
-    }
-
-    private void rotatePlayer()
-    {
-        Chest.transform.rotation = headYaw;
-    }*/
+       

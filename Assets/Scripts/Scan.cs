@@ -18,10 +18,12 @@ public class Scan : MonoBehaviour
     public TMP_Text virusDescription2;
     public TMP_Text virusDescription3;
     public TMP_Text virusDescription4;
+
     void Start()
     {
         notFinishedIcon.SetActive(false);
         finishedIcon.SetActive(false);
+    
     }
 
   
@@ -87,7 +89,9 @@ public class Scan : MonoBehaviour
             currentValue += fillSpeed * Time.deltaTime;
             currentValue = Mathf.Clamp(currentValue, 0f, 100f);
             scanningBar.fillAmount = currentValue / 100f;
+          
         }
+    
     }
 
 }
