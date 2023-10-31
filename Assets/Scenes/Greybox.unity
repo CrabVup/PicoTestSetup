@@ -18271,7 +18271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3216363461719770757, guid: ad35cc1e0e170b94da08bd85c8299404, type: 3}
       propertyPath: craftingRecipeSOList.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3216363461719770757, guid: ad35cc1e0e170b94da08bd85c8299404, type: 3}
       propertyPath: craftingRecipeSOList.Array.data[0]
@@ -18279,6 +18279,14 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 7a99c0b220cd9db448f0ddf8b10bd55e, type: 2}
     - target: {fileID: 3216363461719770757, guid: ad35cc1e0e170b94da08bd85c8299404, type: 3}
       propertyPath: craftingRecipeSOList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 24e37aff678201347864b4a430ee454a, type: 2}
+    - target: {fileID: 3216363461719770757, guid: ad35cc1e0e170b94da08bd85c8299404, type: 3}
+      propertyPath: craftingRecipeSOList.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6ab180f6cad0cc24c807e97302cd76ed, type: 2}
+    - target: {fileID: 3216363461719770757, guid: ad35cc1e0e170b94da08bd85c8299404, type: 3}
+      propertyPath: craftingRecipeSOList.Array.data[3]
       value: 
       objectReference: {fileID: 11400000, guid: 5eb7526dfc80fb841aa7e9c430875dd1, type: 2}
     - target: {fileID: 3216363463473597704, guid: ad35cc1e0e170b94da08bd85c8299404, type: 3}

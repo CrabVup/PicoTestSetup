@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class CraftingSystem : MonoBehaviour
 {
@@ -14,7 +14,11 @@ public class CraftingSystem : MonoBehaviour
     {
         NextRecipe();
     }
-
+    private void Start()
+    {
+        GetComponent<XRSimpleInteractable>().selectEntered.AddListener(x => Craft());
+    }
+   
     void Update()
     {
         
@@ -26,16 +30,11 @@ public class CraftingSystem : MonoBehaviour
     }
     public void NextRecipe()
     {
-        if(craftingRecipeSO == null)
-        {
-            craftingRecipeSO = craftingRecipeSOList[0];
-
-        }else
-        {
+        
             int index = craftingRecipeSOList.IndexOf(craftingRecipeSO);
             index = (index + 1) % craftingRecipeSOList.Count;
             craftingRecipeSO = craftingRecipeSOList[index];
-        }
+        
 
     }
     public void Craft()
