@@ -293,9 +293,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TCells:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7372595261650788094, guid: 6b68793516837604a93ce3c95d1532be, type: 3}
+  - {fileID: 1457305811425220175, guid: 5addb98f560c43f4bb57abb9c44f9840, type: 3}
+  - {fileID: 5073995763419237482, guid: 42a8f4c61c0f924429d21d355d347d44, type: 3}
   speed: 5
 --- !u!1 &6939634745207271569
 GameObject:
