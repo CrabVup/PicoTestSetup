@@ -20,3 +20,27 @@
 [2023-11-01 09:06:42.510] [pxr_streamer] [info] rpc_host.cpp:34 operator (): teminal connect, host = 127.0.0.1, port = 1056, this = 0xc28cc90
 [2023-11-01 09:06:42.512] [pxr_streamer] [info] host_impl.cpp:121 OnTerminalConnect: terminal 22330 is connected, type = Runtime, name = Pico Runtime, this = 0xa052b40
 [2023-11-01 09:06:42.513] [pxr_streamer] [info] runtime_logic_thread.cpp:253 RuntimeTerminalConnect: runtime terminal connect success, this = 0x7650f900
+[2023-11-01 09:27:19.909] [pxr_streamer] [info] rpc_host.cpp:34 operator (): teminal connect, host = 127.0.0.1, port = 1725, this = 0xc28cc90
+[2023-11-01 09:27:19.911] [pxr_streamer] [info] host_impl.cpp:121 OnTerminalConnect: terminal 28249 is connected, type = Driver, name = , this = 0xa052b40
+[2023-11-01 09:28:30.475] [pxr_streamer] [info] rpc_host.cpp:34 operator (): teminal connect, host = 127.0.0.1, port = 1737, this = 0xc28cc90
+[2023-11-01 09:30:28.408] [pxr_streamer] [info] rpc_host.cpp:34 operator (): teminal connect, host = 127.0.0.1, port = 1751, this = 0xc28cc90
+[2023-11-01 09:35:18.458] [pxr_streamer] [info] rpc_host.cpp:34 operator (): teminal connect, host = 127.0.0.1, port = 1784, this = 0xc28cc90
+[2023-11-01 10:27:23.553] [pxr_streamer] [info] rpc_host.cpp:42 operator (): teminal disconnect, host = 127.0.0.1, port = 1725, this = 0xc28cc90
+[2023-11-01 10:27:24.555] [pxr_streamer] [info] rpc_host.cpp:34 operator (): teminal connect, host = 127.0.0.1, port = 2948, this = 0xc28cc90
+[2023-11-01 10:28:35.134] [pxr_streamer] [info] rpc_host.cpp:42 operator (): teminal disconnect, host = 127.0.0.1, port = 1737, this = 0xc28cc90
+[2023-11-01 10:28:36.136] [pxr_streamer] [info] rpc_host.cpp:34 operator (): teminal connect, host = 127.0.0.1, port = 2999, this = 0xc28cc90
+[2023-11-01 10:55:40.593] [pxr_streamer] [info] rpc_host.cpp:42 operator (): teminal disconnect, host = 127.0.0.1, port = 1784, this = 0xc28cc90
+[2023-11-01 10:55:41.604] [pxr_streamer] [info] rpc_host.cpp:34 operator (): teminal connect, host = 127.0.0.1, port = 3167, this = 0xc28cc90
+[2023-11-01 10:55:45.548] [pxr_streamer] [info] rpc_host.cpp:42 operator (): teminal disconnect, host = 127.0.0.1, port = 1751, this = 0xc28cc90
+[2023-11-01 10:55:46.549] [pxr_streamer] [info] rpc_host.cpp:34 operator (): teminal connect, host = 127.0.0.1, port = 3168, this = 0xc28cc90
+[2023-11-01 10:57:00.241] [pxr_streamer] [info] runtime_logic_thread.cpp:262 RuntimeTerminalDisconnect: runtime terminal disconnect, this = 0x7650f900
+[2023-11-01 10:57:00.242] [pxr_streamer] [info] host_impl.cpp:131 OnTerminalDisconnect: terminal 22330 is disconnected, this = 0xa052b40
+[2023-11-01 10:57:00.242] [pxr_streamer] [info] rpc_host.cpp:42 operator (): teminal disconnect, host = 127.0.0.1, port = 1056, this = 0xc28cc90
+[2023-11-01 10:57:00.260] [pxr_streamer] [info] rpc_host.cpp:42 operator (): teminal disconnect, host = 127.0.0.1, port = 2948, this = 0xc28cc90
+[2023-11-01 10:57:00.260] [pxr_streamer] [info] rpc_host.cpp:42 operator (): teminal disconnect, host = 127.0.0.1, port = 3167, this = 0xc28cc90
+[2023-11-01 10:57:00.260] [pxr_streamer] [info] rpc_host.cpp:42 operator (): teminal disconnect, host = 127.0.0.1, port = 2999, this = 0xc28cc90
+[2023-11-01 10:57:00.260] [pxr_streamer] [info] rpc_host.cpp:42 operator (): teminal disconnect, host = 127.0.0.1, port = 3168, this = 0xc28cc90
+[2023-11-01 10:57:00.291] [pxr_streamer] [info] host_impl.cpp:69 Shutdown: host disconnect, this = 0xa052b40
+[2023-11-01 10:57:00.292] [pxr_streamer] [debug] runtime_logic_thread.cpp:158 Execute: runtime logic thread end, this = 0x7650f900
+[2023-11-01 10:57:00.292] [pxr_streamer] [info] runtime_thread.cpp:85 run: thread finished, name=LogicThread, this = 0x7650f900
+[2023-11-01 10:57:00.292] [pxr_streamer] [info] main.cpp:107 main: ======Runtime process end======
