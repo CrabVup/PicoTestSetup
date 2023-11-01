@@ -9,6 +9,7 @@ public class CraftingSystem : MonoBehaviour
     public BoxCollider placeItemAreaBoxCollider;
     private CraftingRecipeSO craftingRecipeSO;
     public Transform itemSpawnPoint;
+    public GameObject craftVfx;
 
     private void Awake()
     {
@@ -16,7 +17,8 @@ public class CraftingSystem : MonoBehaviour
     }
     private void Start()
     {
-        GetComponent<XRSimpleInteractable>().selectEntered.AddListener(x => Craft());
+        GetComponent<XRSimpleInteractable>().selectEntered.AddListener(x => CraftVfx());
+        craftVfx.SetActive(false);
     }
    
     void Update()
@@ -36,6 +38,12 @@ public class CraftingSystem : MonoBehaviour
             craftingRecipeSO = craftingRecipeSOList[index];
         
 
+    }
+
+    public void CraftVfx()
+    {
+        craftVfx.SetActive(true);
+        Invoke("Craft", 1f);
     }
     public void Craft()
     {
@@ -73,6 +81,7 @@ public class CraftingSystem : MonoBehaviour
                 Destroy(consumeItemGameObject);
             }
         }
-      
+        craftVfx.SetActive(false);
+
     }
 }

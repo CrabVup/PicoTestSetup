@@ -11,7 +11,7 @@ public class ZG : MonoBehaviour
     [Header("Movement")]
     public float downAndUpSpeed;
     public float speed;
-    public float maxSpeed = 1.0f; // Maximum speed in units per second.
+    public float maxSpeed = 5f; // Maximum speed in units per second.
 
     public GameObject mainCamera;    // Reference to the main camera.
 
@@ -90,7 +90,9 @@ public class ZG : MonoBehaviour
         {
             rb.useGravity = true;
             movementScript.enabled = true; // Disable the script.
-            maxSpeed = 0;
+            maxSpeed = 100;
+            speed = 0;
+            downAndUpSpeed = 0;
         }
     }
 
@@ -100,7 +102,9 @@ public class ZG : MonoBehaviour
         {
             rb.useGravity = false;
             movementScript.enabled = false; 
-            maxSpeed = 10;
+            maxSpeed = 5;
+            speed = 20;
+            downAndUpSpeed = 25;
             //rb.velocity = new Vector3(0, 0, 0);
         }
     }
