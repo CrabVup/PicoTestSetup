@@ -19,11 +19,18 @@ public class Scan : MonoBehaviour
     public TMP_Text virusDescription3;
     public TMP_Text virusDescription4;
 
+    public GameObject VirusA;
+    public GameObject VirusB;
+    public GameObject VirusC;
+    public string VirusID;
+
     void Start()
     {
         notFinishedIcon.SetActive(false);
         finishedIcon.SetActive(false);
-    
+        VirusA.SetActive(false);
+        VirusB.SetActive(false);
+        VirusC.SetActive(false);
     }
 
   
@@ -65,7 +72,21 @@ public class Scan : MonoBehaviour
             virusDescription2.text = "Lifetime\n: " + scannedVirus.GetLifetime();
             virusDescription3.text = "Amount\n: " + scannedVirus.GetSize();
         virusDescription4.text = "Infectivity\n: " + scannedVirus.GetInfectivity();
-    }
+            VirusID = scannedVirus.GetID();
+
+            if (VirusID == "A")
+            {
+                VirusA.SetActive(true);
+            }
+            if (VirusID == "B")
+            {
+                VirusB.SetActive(true);
+            }
+            if (VirusID == "C")
+            {
+                VirusC.SetActive(true);
+            }
+        }
     }
     
     private void OnTriggerStay(Collider other)
