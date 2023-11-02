@@ -14053,6 +14053,9 @@ MonoBehaviour:
   scanSounds: {fileID: 1044548580}
   scanButtonPress: {fileID: 8300000, guid: a4d34496c830a3141a25171b6b42683c, type: 3}
   scanButtonRelease: {fileID: 8300000, guid: 316322f55a0cbcc4aac2c69086dc16df, type: 3}
+  scanPickUp: {fileID: 8300000, guid: 668f837005b1796478a810cf9dc2f338, type: 3}
+  scanInsert: {fileID: 8300000, guid: f765ad8d0f6f74a49a52549564406aa8, type: 3}
+  virusPop: {fileID: 8300000, guid: 0ebf7c57e40b3e743bceeb1a1b0f346e, type: 3}
 --- !u!1 &1858219407
 GameObject:
   m_ObjectHideFlags: 0

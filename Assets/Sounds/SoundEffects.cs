@@ -6,7 +6,9 @@ public class SoundEffects : MonoBehaviour
 {
 
     public AudioSource scanSounds;
-    public AudioClip scanButtonPress, scanButtonRelease;
+    public AudioClip scanButtonPress, scanButtonRelease, scanPickUp, scanInsert;
+
+    public AudioClip virusPop;
 
     void Start()
     {
