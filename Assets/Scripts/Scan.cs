@@ -43,6 +43,9 @@ public class Scan : MonoBehaviour
         if (Input.GetButton("Fire3"))
         {
             currentValue = 0;
+            VirusA.SetActive(false);
+            VirusB.SetActive(false);
+            VirusC.SetActive(false);
             Debug.Log("222");
         
         }

@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
-        txtNumber.text = number.ToString() + ("/ 3");
+        txtNumber.text = ("Clear all the virus ") + number.ToString() + ("/ 3");
         health = Mathf.Clamp(health, 0, maxHealth);
         UpdateHealthUI();
         if (col == true) // THE CONDITION HERE IS "THE TYPE DOESN'T MATCH", IT WILL LOWER THE BAR, BUT I DIDN'T CODE THAT, SO THE CONDITION CAN BE FOUND IN ONE OF THE OTHER SCRIPTS WE HAVE IN GAME
