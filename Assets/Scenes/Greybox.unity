@@ -14645,9 +14645,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8c917d60c7db714a86cfd44e75fefc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  downAndUpSpeed: 20
-  speed: 15
-  maxSpeed: 7
+  downAndUpSpeed: 80
+  speed: 90
+  maxSpeed: 8
   mainCamera: {fileID: 64765833}
   scan: {fileID: 1728667543}
   scanVFX: {fileID: 1165939572}

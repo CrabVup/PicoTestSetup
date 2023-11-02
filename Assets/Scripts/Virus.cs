@@ -20,6 +20,7 @@ public struct VirusInfo
 
 public class Virus : MonoBehaviour
 {
+    public PlayerHealth playerHealth;
     [SerializeField]
     public VirusInfo info;
     public string GetID()
@@ -49,6 +50,7 @@ public class Virus : MonoBehaviour
     {
         if (other.CompareTag("VirusA"))
         {
+            playerHealth.Increase();
             Destroy(this.gameObject);
         }
     }
