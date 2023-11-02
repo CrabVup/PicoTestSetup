@@ -13480,7 +13480,6 @@ MonoBehaviour:
   VirusB: {fileID: 1542548724}
   VirusC: {fileID: 153627933}
   VirusID: 
-  soundEffects: {fileID: 1853847405}
 --- !u!114 &1728667544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14525,6 +14524,7 @@ MonoBehaviour:
   scanVFX2: {fileID: 1545583069}
   movementScript: {fileID: 1853847395}
   stationCollider: {fileID: 715552666}
+  soundEffects: {fileID: 1853847405}
 --- !u!114 &1853847405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15761,7 +15761,6 @@ MonoBehaviour:
   VirusB: {fileID: 0}
   VirusC: {fileID: 0}
   VirusID: 
-  soundEffects: {fileID: 0}
 --- !u!114 &1930816441
 MonoBehaviour:
   m_ObjectHideFlags: 0
