@@ -6,8 +6,8 @@ using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private float health;
-    private float lerpTimer; // animate the health bars 
+    public float health;
+    public float lerpTimer; // animate the health bars 
     public float maxHealth = 10f;
     public float chipSpeed = 2f; // how quickly the delayed bar takes to catch up to the default/ original one 
 
@@ -16,11 +16,11 @@ public class PlayerHealth : MonoBehaviour
 
     public bool col;
 
-    public TextMeshProUGUI healthText;
+    //public TextMeshProUGUI healthText;
 
     void Start()
     {
-        health = maxHealth;
+        health = 0;
     }
 
     void Update()
@@ -52,7 +52,7 @@ public class PlayerHealth : MonoBehaviour
             percentComplete = percentComplete * percentComplete;
             backHealthBar.fillAmount = Mathf.Lerp(fillB, hFraction, percentComplete);
         }
-        /*
+        
         if (fillF < hFraction)
         {
             backHealthBar.color = Color.green;
@@ -62,9 +62,9 @@ public class PlayerHealth : MonoBehaviour
             percentComplete = percentComplete * percentComplete;
             frontHealthBar.fillAmount = Mathf.Lerp(fillF, backHealthBar.fillAmount, percentComplete);
         }
-        */
+        
 
-        healthText.text = Mathf.Round(health) + "/" + Mathf.Round(maxHealth);
+       // healthText.text = Mathf.Round(health) + "/" + Mathf.Round(maxHealth);
     }
 
     public void NoMatch(float match)
@@ -82,11 +82,17 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    /* THIS IS FOR RESTORING HEALTH, MIGHT BE USEFUL LATER IF WE DECIDE TO IMPLEMENT MORE MECHANICS 
+    //THIS IS FOR RESTORING HEALTH, MIGHT BE USEFUL LATER IF WE DECIDE TO IMPLEMENT MORE MECHANICS 
     public void RestoreHealth(float healAmount)
     {
-        health += healthAmount;
+        health += 33f;
         lerpTimer = 0f;
     }
-    */
+
+    public void Increase()
+    {
+        health += 3.3f;
+        lerpTimer = 0f;
+    }
+
 }
