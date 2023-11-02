@@ -24,6 +24,8 @@ public class Scan : MonoBehaviour
     public GameObject VirusC;
     public string VirusID;
 
+    public SoundEffects soundEffects;
+
     void Start()
     {
         notFinishedIcon.SetActive(false);
@@ -31,6 +33,8 @@ public class Scan : MonoBehaviour
         VirusA.SetActive(false);
         VirusB.SetActive(false);
         VirusC.SetActive(false);
+
+        soundEffects = GetComponent<SoundEffects>();
     }
 
   
@@ -40,6 +44,11 @@ public class Scan : MonoBehaviour
         {
             currentValue = 0;
             Debug.Log("222");
+            soundEffects.ScanButtonPressed();
+        }
+        else
+        {
+
         }
         if (isScanned == true)
         {
