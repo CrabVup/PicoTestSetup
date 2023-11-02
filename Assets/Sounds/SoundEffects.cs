@@ -11,6 +11,14 @@ public class SoundEffects : MonoBehaviour
     public AudioClip scanButtonPress, scanButtonRelease, scanInsert;
     public AudioClip virusPop;
 
+    public void ScanButtonExit()
+    {
+
+        scanSource.clip = scanButtonRelease;
+        scanSource.Play();
+
+    }
+
     public void InsertScannerSound()
     {
 
@@ -23,14 +31,6 @@ public class SoundEffects : MonoBehaviour
     {
 
         scanSource.clip = scanButtonPress;
-        scanSource.Play();
-
-    }
-
-    public void ScanButtonExit()
-    {
-
-        scanSource.clip = scanButtonRelease;
         scanSource.Play();
 
     }
