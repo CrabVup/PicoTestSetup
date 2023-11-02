@@ -24,7 +24,8 @@ public class ZG : MonoBehaviour
     public ContinuousMoveProviderBase movementScript;
     public BoxCollider stationCollider;
 
-    public SoundEffects soundEffects;
+    public AudioSource scanSounds;
+    public AudioClip scanPressed, scanReleased;
 
     void Start()
     {
@@ -37,9 +38,11 @@ public class ZG : MonoBehaviour
     {
         if (Input.GetButton("Fire1"))
         {
+            scanSounds.clip = scanPressed;
+            scanSounds.Play();
             scan.GetInfo();
             Debug.Log("Yes!");
-            soundEffects.ScanButtonPressed();
+            
             if (scan.isScanned)
             {
                 scanVFX.SetActive(true);
@@ -52,7 +55,7 @@ public class ZG : MonoBehaviour
         {
             scanVFX.SetActive(false);
             scanVFX2.SetActive(false);
-            soundEffects.ScanButtonExit();
+
         }
 
         float upDownInput = Input.GetAxis("UpDown");
