@@ -12,7 +12,10 @@ public class PlayerHealth : MonoBehaviour
     public float chipSpeed = 2f; // how quickly the delayed bar takes to catch up to the default/ original one 
 
     public Image frontHealthBar;
-    public Image backHealthBar; 
+    public Image backHealthBar;
+
+    public TextMeshProUGUI txtNumber;
+    public int number = 0;
 
     public bool col;
 
@@ -25,6 +28,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
+        txtNumber.text = number.ToString() + ("/ 3");
         health = Mathf.Clamp(health, 0, maxHealth);
         UpdateHealthUI();
         if (col == true) // THE CONDITION HERE IS "THE TYPE DOESN'T MATCH", IT WILL LOWER THE BAR, BUT I DIDN'T CODE THAT, SO THE CONDITION CAN BE FOUND IN ONE OF THE OTHER SCRIPTS WE HAVE IN GAME
@@ -91,6 +95,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void Increase()
     {
+        number++;
         health += 3.3f;
         lerpTimer = 0f;
     }
