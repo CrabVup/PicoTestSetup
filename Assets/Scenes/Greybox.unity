@@ -6547,7 +6547,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: maker b
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -320789652978280873, guid: d8f9f7cd22cdb4046a982b355612a842, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d8f9f7cd22cdb4046a982b355612a842, type: 3}
 --- !u!1 &902154901
 GameObject:
@@ -13666,7 +13667,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1728667542}
   m_LocalRotation: {x: -0, y: 0.96794826, z: -0, w: 0.2511497}
-  m_LocalPosition: {x: 9.55, y: -19.34, z: -40.38}
+  m_LocalPosition: {x: -7.04, y: -0.89, z: -11.4}
   m_LocalScale: {x: 0.35000002, y: 0.35, z: 0.35000002}
   m_ConstrainProportionsScale: 1
   m_Children:

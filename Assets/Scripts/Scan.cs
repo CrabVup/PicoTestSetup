@@ -12,7 +12,7 @@ public class Scan : MonoBehaviour
 
     public Image scanningBar;
     public float fillSpeed = 1f; 
-    public float currentValue = 0f;
+    public float currentValue;
 
     public TMP_Text virusDescription1;
     public TMP_Text virusDescription2;
@@ -39,6 +39,7 @@ public class Scan : MonoBehaviour
   
     void Update()
     {
+        scanningBar.fillAmount = currentValue / 100f;
         if (Input.GetButton("Fire3"))
         {
             currentValue = 0;
