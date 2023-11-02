@@ -13576,6 +13576,7 @@ GameObject:
   - component: {fileID: 1728667545}
   - component: {fileID: 1728667544}
   - component: {fileID: 1728667543}
+  - component: {fileID: 1728667548}
   m_Layer: 0
   m_Name: New Scanner
   m_TagString: InfoA
@@ -13809,6 +13810,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 139.037, z: 0}
+--- !u!82 &1728667548
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728667542}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1738719567
 GameObject:
   m_ObjectHideFlags: 0
@@ -14654,7 +14751,9 @@ MonoBehaviour:
   scanVFX2: {fileID: 1545583069}
   movementScript: {fileID: 1853847395}
   stationCollider: {fileID: 715552666}
-  soundEffects: {fileID: 1853847405}
+  scanSounds: {fileID: 1728667548}
+  scanPressed: {fileID: 8300000, guid: a4d34496c830a3141a25171b6b42683c, type: 3}
+  scanReleased: {fileID: 8300000, guid: 316322f55a0cbcc4aac2c69086dc16df, type: 3}
 --- !u!114 &1853847405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14667,14 +14766,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d225597a36c0e4eafae16935f9cc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scanSource: {fileID: 1044548583}
-  viruseA: {fileID: 6504990091837022675}
-  viruseB: {fileID: 7719518208117309033}
-  bacteria: {fileID: 1890794919}
-  scanButtonPress: {fileID: 8300000, guid: a4d34496c830a3141a25171b6b42683c, type: 3}
-  scanButtonRelease: {fileID: 8300000, guid: 316322f55a0cbcc4aac2c69086dc16df, type: 3}
-  scanInsert: {fileID: 8300000, guid: f765ad8d0f6f74a49a52549564406aa8, type: 3}
-  virusPop: {fileID: 8300000, guid: 0ebf7c57e40b3e743bceeb1a1b0f346e, type: 3}
 --- !u!1 &1858219407
 GameObject:
   m_ObjectHideFlags: 0
@@ -15077,6 +15168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c17daede8e79fc4199599dba4b3b3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
   info:
     Encode: Bacteria-N985JK
     Lifetime: 4 years
@@ -15123,7 +15215,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0ebf7c57e40b3e743bceeb1a1b0f346e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -19543,6 +19635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c17daede8e79fc4199599dba4b3b3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
   info:
     Encode: Eric-O9ASTA
     Lifetime: 12 years
@@ -19588,7 +19681,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0ebf7c57e40b3e743bceeb1a1b0f346e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -19880,6 +19973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c17daede8e79fc4199599dba4b3b3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
   info:
     Encode: Guillaume-FE114P
     Lifetime: 0.4 years
@@ -19925,7 +20019,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0ebf7c57e40b3e743bceeb1a1b0f346e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

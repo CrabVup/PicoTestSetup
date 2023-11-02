@@ -50,6 +50,7 @@ public class Virus : MonoBehaviour
     {
         if (other.CompareTag("VirusA"))
         {
+            GetComponent<AudioSource>().Play();
             playerHealth.Increase();
             Destroy(this.gameObject);
         }
