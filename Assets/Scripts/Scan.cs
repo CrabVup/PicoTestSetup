@@ -46,10 +46,7 @@ public class Scan : MonoBehaviour
             Debug.Log("222");
         
         }
-        else
-        {
-
-        }
+       
         if (isScanned == true)
         {
             notFinishedIcon.SetActive(true);
