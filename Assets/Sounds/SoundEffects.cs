@@ -5,46 +5,33 @@ using UnityEngine;
 public class SoundEffects : MonoBehaviour
 {
 
-    public AudioSource scanSounds;
+    public AudioSource scanSource;
     public AudioSource viruseA, viruseB, bacteria;
 
-    public AudioClip scanButtonPress, scanButtonRelease, scanPickUp, scanInsert;
+    public AudioClip scanButtonPress, scanButtonRelease, scanInsert;
     public AudioClip virusPop;
-
-    void Start()
-    {
-        
-    }
-
-    public void PickUpScannerSound()
-    {
-
-        scanSounds.clip = scanPickUp;
-        scanSounds.Play();
-
-    }
 
     public void InsertScannerSound()
     {
 
-        scanSounds.clip = scanInsert;
-        scanSounds.Play();
+        scanSource.clip = scanInsert;
+        scanSource.Play();
 
     }
 
     public void ScanButtonPressed()
     {
 
-        scanSounds.clip = scanButtonPress;
-        scanSounds.Play();
+        scanSource.clip = scanButtonPress;
+        scanSource.Play();
 
     }
 
     public void ScanButtonExit()
     {
 
-        scanSounds.clip = scanButtonRelease;
-        scanSounds.Play();
+        scanSource.clip = scanButtonRelease;
+        scanSource.Play();
 
     }
 
