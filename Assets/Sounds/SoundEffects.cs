@@ -40,6 +40,14 @@ public class SoundEffects : MonoBehaviour
 
     }
 
+    public void ScanButtonExit()
+    {
+
+        scanSounds.clip = scanButtonRelease;
+        scanSounds.Play();
+
+    }
+
     public void ViruseAPop()
     {
 
