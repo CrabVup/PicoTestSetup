@@ -95,9 +95,15 @@ public class PlayerHealth : MonoBehaviour
 
     public void Increase()
     {
-        number++;
+        //number++;
         health += 3.3f;
         lerpTimer = 0f;
     }
 
+    public void Decrease()
+    {
+        //number--;
+        health -= 3.3f;
+        lerpTimer = 0f;
+    }
 }

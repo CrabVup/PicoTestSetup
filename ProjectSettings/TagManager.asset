@@ -16,6 +16,8 @@ TagManager:
   - MarkerA
   - MarkerB
   - MarkerC
+  - bacteria
+  - ViruseB
   layers:
   - Default
   - TransparentFX

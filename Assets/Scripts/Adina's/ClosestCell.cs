@@ -8,7 +8,7 @@ public class ClosestCell : MonoBehaviour
 
     float distanceFromTarget;
 
-    // The speed the virus is moving towards the marker
+    // The speed the t-cell is moving towards the marker
     public float speed = 1.0f;
 
     //public Marker marker;
