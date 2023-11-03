@@ -34,7 +34,7 @@ public class CalculateDistance : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (boolDestroyed.virusADestroyed == false)
+        if (virusADestroyed == false)
         {
             // Calculate distance value between player & virus
             distance = (virusA.transform.position - transform.position).magnitude;
@@ -45,13 +45,13 @@ public class CalculateDistance : MonoBehaviour
             distanceText.text = "Distance: " + distance.ToString("F1") + "metres";
         } else
         {
-            if (boolDestroyed.virusBDestroyed == false)
+            if (virusBDestroyed == false)
             {
                 distance = (virusB.transform.position - transform.position).magnitude;
                 distanceText.text = "Distance: " + distance.ToString("F1") + "metres";
             } else
             {
-                if (boolDestroyed.bacteria == false)
+                if (bacteriaDestroyed == false)
                 {
                     distance = (bacteria.transform.position - transform.position).magnitude;
                     distanceText.text = "Distance: " + distance.ToString("F1") + "metres";
