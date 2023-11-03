@@ -20,10 +20,8 @@ public struct VirusInfo
 
 public class Virus : MonoBehaviour
 {
-    public bool virusADestroyed;
-    public bool virusBDestroyed;
-    public bool bacteria;
 
+    public CalculateDistance calculateDistance;
     public PlayerHealth playerHealth;
     [SerializeField]
     public VirusInfo info;
@@ -52,9 +50,7 @@ public class Virus : MonoBehaviour
 
     public void Start()
     {
-        virusADestroyed = false;
-        virusBDestroyed = false;
-        bacteria = false;
+       
     }
 
     public void OnTriggerEnter(Collider other)
@@ -64,7 +60,7 @@ public class Virus : MonoBehaviour
             GetComponent<AudioSource>().Play();
             playerHealth.Increase();
             Destroy(this.gameObject);
-            virusADestroyed = true;
+            calculateDistance.virusADestroyed = true;
         }
     }
 }

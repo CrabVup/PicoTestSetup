@@ -1,11 +1,13 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CalculateDistance : MonoBehaviour
 {
-    public Virus boolDestroyed;
+    public bool virusADestroyed;
+    public bool virusBDestroyed;
+    public bool bacteriaDestroyed;
     // Movement
     //private Rigidbody rb;
     //private float dirX, dirZ, moveSpeed = 5f;
@@ -63,4 +65,4 @@ public class CalculateDistance : MonoBehaviour
         // Movement
         //rb.velocity = new Vector3(dirX, rb.velocity.y, dirZ);
     }
-}*/
+}
