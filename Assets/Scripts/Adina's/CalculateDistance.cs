@@ -51,7 +51,7 @@ public class CalculateDistance : MonoBehaviour
                 // Display distance value via UI text
                 // distanceToString(F1) shows value with 1 digit after period (ex. 12.3)
                 // distanceToString(F2) will show 2 digits after period (ex. 12.31)
-                distanceTextVirusA.text = "Distance: " + distance.ToString("F1") + "metres";
+                distanceTextVirusA.text = "Distance Virus A: " + distance.ToString("F1") + "metres";
             }
         }
 
@@ -60,7 +60,7 @@ public class CalculateDistance : MonoBehaviour
             if (virusB != null)
             {
                 distance = (virusB.transform.position - transform.position).magnitude;
-                distanceTextVirusB.text = "Distance: " + distance.ToString("F1") + "metres";
+                distanceTextVirusB.text = "Distance Virus B: " + distance.ToString("F1") + "metres";
             }
         }
         
@@ -69,7 +69,7 @@ public class CalculateDistance : MonoBehaviour
             if (bacteria != null)
             {
                 distance = (bacteria.transform.position - transform.position).magnitude;
-                distanceTextBacteria.text = "Distance: " + distance.ToString("F1") + "metres";
+                distanceTextBacteria.text = "Distance Bacteria: " + distance.ToString("F1") + "metres";
             }
         } 
     }
