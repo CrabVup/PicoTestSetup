@@ -4823,7 +4823,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674408277}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4874,7 +4874,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674408277}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.69299793, y: -0.105, z: 2.8876915}
+  m_LocalPosition: {x: 0.69299793, y: 0.1, z: 2.8876915}
   m_LocalScale: {x: 0.053823438, y: 11.830405, z: 15.892907}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6035,7 +6035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   calculateDistance: {fileID: 1728667549}
   playerHealth: {fileID: 1994901514}
-  marker: {fileID: 899632576}
+  marker: {fileID: 1576555352983979327, guid: d8f9f7cd22cdb4046a982b355612a842, type: 3}
   speed: 8
 --- !u!1 &756766019
 GameObject:
@@ -6518,7 +6518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 629446075367621656, guid: b137cfb3d3864954fa3a3837e93698f9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5436237290453101053, guid: b137cfb3d3864954fa3a3837e93698f9, type: 3}
       propertyPath: m_Constraints
@@ -7880,7 +7880,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1810558566668761184, guid: d8f9f7cd22cdb4046a982b355612a842, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -320789652978280873, guid: d8f9f7cd22cdb4046a982b355612a842, type: 3}
@@ -9890,7 +9890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   calculateDistance: {fileID: 1728667549}
   playerHealth: {fileID: 1994901514}
-  marker: {fileID: 598798717}
+  marker: {fileID: 323507172640045391, guid: b137cfb3d3864954fa3a3837e93698f9, type: 3}
   speed: 8
 --- !u!82 &1066406030
 AudioSource:
@@ -10297,7 +10297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   calculateDistance: {fileID: 1728667549}
   playerHealth: {fileID: 1994901514}
-  marker: {fileID: 899632576}
+  marker: {fileID: 1576555352983979327, guid: d8f9f7cd22cdb4046a982b355612a842, type: 3}
   speed: 8
 --- !u!1 &1085730752
 GameObject:
@@ -11460,8 +11460,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173684669}
   m_LocalRotation: {x: -0.4304593, y: 0.56098557, z: -0.4304593, w: -0.56098557}
-  m_LocalPosition: {x: 0.511, y: 0.5970001, z: 0.0009994507}
-  m_LocalScale: {x: 1.7265141, y: 0.14541337, z: 0.8092113}
+  m_LocalPosition: {x: 0.514, y: 0.609, z: 0.0009994507}
+  m_LocalScale: {x: 1.6479211, y: 0.16113353, z: 0.89669245}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 752227194}
@@ -17021,7 +17021,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8396642580274659163, guid: 4c8ed3a6638d00e49915dfd7b8cf6ce7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8667094064329228812, guid: 4c8ed3a6638d00e49915dfd7b8cf6ce7, type: 3}
       propertyPath: isPlaced
@@ -18364,7 +18364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   calculateDistance: {fileID: 1728667549}
   playerHealth: {fileID: 1994901514}
-  marker: {fileID: 1775242978}
+  marker: {fileID: 8667094064329228812, guid: 4c8ed3a6638d00e49915dfd7b8cf6ce7, type: 3}
   speed: 8
 --- !u!1 &1906434405
 GameObject:
@@ -19820,7 +19820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   calculateDistance: {fileID: 1728667549}
   playerHealth: {fileID: 1994901514}
-  marker: {fileID: 598798717}
+  marker: {fileID: 323507172640045391, guid: b137cfb3d3864954fa3a3837e93698f9, type: 3}
   speed: 8
 --- !u!82 &2008734611
 AudioSource:
@@ -21737,7 +21737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   calculateDistance: {fileID: 1728667549}
   playerHealth: {fileID: 1994901514}
-  marker: {fileID: 1775242978}
+  marker: {fileID: 8667094064329228812, guid: 4c8ed3a6638d00e49915dfd7b8cf6ce7, type: 3}
   speed: 8
 --- !u!1001 &1163420341832560008
 PrefabInstance:

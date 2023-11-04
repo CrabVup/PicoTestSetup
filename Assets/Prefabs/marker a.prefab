@@ -102,6 +102,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlaced: 0
+  Scannable:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!54 &5436237290453101053
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -116,7 +119,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &8495606765037690131
 BoxCollider:

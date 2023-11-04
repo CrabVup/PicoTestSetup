@@ -5,6 +5,7 @@ using UnityEngine;
 public class Marker : MonoBehaviour
 {
     public bool isPlaced;
+   public LayerMask Scannable;
 
     public void StartAction()
     {
@@ -23,11 +24,17 @@ public class Marker : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        isPlaced = true;
+        if (Scannable == (Scannable | (1 << other.gameObject.layer)))
+        {
+            isPlaced = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        isPlaced = false;
+        if (Scannable == (Scannable | (1 << other.gameObject.layer)))
+        {
+            isPlaced = false;
+        }
     }
 }
