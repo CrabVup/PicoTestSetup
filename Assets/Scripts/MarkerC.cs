@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Marker : MonoBehaviour
+public class MarkerC : MonoBehaviour
 {
     public bool isPlaced;
-
     public void StartAction()
     {
         isPlaced = true;
@@ -16,18 +15,8 @@ public class Marker : MonoBehaviour
     public void ExitAction()
     {
         isPlaced = false;
-        gameObject.SetActive(false);
+        Destroy(this.gameObject);
         Debug.Log("isOut");
 
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        isPlaced = true;
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        isPlaced = false;
     }
 }

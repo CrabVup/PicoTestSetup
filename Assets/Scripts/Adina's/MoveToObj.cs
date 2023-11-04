@@ -9,7 +9,7 @@ public class MoveToObj : MonoBehaviour
     public float speed = 1.0f;
 
     // The target (virus) position
-    public GameObject target;
+    //public GameObject target;
 
     void Update()
     {
@@ -17,14 +17,10 @@ public class MoveToObj : MonoBehaviour
         {
             // Move T-Cell a step closer to the virus
             var step = speed * Time.deltaTime; // calculate distance to move
-            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, step);
+            transform.position = Vector3.MoveTowards(transform.position, marker.transform.position, step);
         }
 
-    }
 
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawLine(transform.position, target.transform.position);
     }
+    
 }

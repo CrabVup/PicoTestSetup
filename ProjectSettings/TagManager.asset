@@ -18,6 +18,10 @@ TagManager:
   - MarkerC
   - bacteria
   - ViruseB
+  - VirusB
+  - T1
+  - T2
+  - T3
   layers:
   - Default
   - TransparentFX
