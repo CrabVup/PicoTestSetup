@@ -60,7 +60,7 @@ public class Virus : MonoBehaviour
             GetComponent<AudioSource>().Play();
             playerHealth.Increase();
             Destroy(this.gameObject);
-            calculateDistance.virusADestroyed = true;
+            calculateDistance.virusADestroyed = true; // this is only for virus a, u'll need to add those tags for the other two viruses
         }
     }
 }

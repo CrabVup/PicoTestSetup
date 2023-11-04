@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CalculateDistance : MonoBehaviour
 {
@@ -15,12 +16,18 @@ public class CalculateDistance : MonoBehaviour
     // Reference to Virus Position
     [SerializeField]
     private Transform virusA;
+    [SerializeField]
     private Transform virusB;
+    [SerializeField]
     private Transform bacteria;
 
     // Reference to the UI Text that shows the distance value
     [SerializeField]
-    private Text distanceText;
+    private TextMeshProUGUI distanceTextVirusA;
+    [SerializeField]
+    private TextMeshProUGUI distanceTextVirusB;
+    [SerializeField]
+    private TextMeshProUGUI distanceTextBacteria;
 
     // The Distance Value that's calculated
     private float distance;
@@ -36,28 +43,35 @@ public class CalculateDistance : MonoBehaviour
     {
         if (virusADestroyed == false)
         {
-            // Calculate distance value between player & virus
-            distance = (virusA.transform.position - transform.position).magnitude;
+            if (virusA != null)
+            {
+                // Calculate distance value between player & virus
+                distance = (virusA.transform.position - transform.position).magnitude;
 
-            // Display distance value via UI text
-            // distanceToString(F1) shows value with 1 digit after period (ex. 12.3)
-            // distanceToString(F2) will show 2 digits after period (ex. 12.31)
-            distanceText.text = "Distance: " + distance.ToString("F1") + "metres";
-        } else
-        {
-            if (virusBDestroyed == false)
-            {
-                distance = (virusB.transform.position - transform.position).magnitude;
-                distanceText.text = "Distance: " + distance.ToString("F1") + "metres";
-            } else
-            {
-                if (bacteriaDestroyed == false)
-                {
-                    distance = (bacteria.transform.position - transform.position).magnitude;
-                    distanceText.text = "Distance: " + distance.ToString("F1") + "metres";
-                } 
+                // Display distance value via UI text
+                // distanceToString(F1) shows value with 1 digit after period (ex. 12.3)
+                // distanceToString(F2) will show 2 digits after period (ex. 12.31)
+                distanceTextVirusA.text = "Distance: " + distance.ToString("F1") + "metres";
             }
         }
+
+        if (virusBDestroyed == false)
+        {
+            if (virusB != null)
+            {
+                distance = (virusB.transform.position - transform.position).magnitude;
+                distanceTextVirusB.text = "Distance: " + distance.ToString("F1") + "metres";
+            }
+        }
+        
+        if (bacteriaDestroyed == false)
+        {
+            if (bacteria != null)
+            {
+                distance = (bacteria.transform.position - transform.position).magnitude;
+                distanceTextBacteria.text = "Distance: " + distance.ToString("F1") + "metres";
+            }
+        } 
     }
 
     private void FixedUpdate()
