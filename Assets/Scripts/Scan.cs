@@ -56,6 +56,7 @@ public class Scan : MonoBehaviour
             distanceA.SetActive(true);
             distanceB.SetActive(true);
             distanceC.SetActive(true);
+            lostTrackIcon.SetActive(false);
             isTracked = false;
             Debug.Log("222");
         
@@ -131,14 +132,14 @@ public class Scan : MonoBehaviour
     
     private void OnTriggerStay(Collider other)
     {
-          if (other.CompareTag("VirusA"))
+          if (other.gameObject.layer == LayerMask.NameToLayer("Scannable"))
             {
                  isScanned = true;
             }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("VirusA"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Scannable"))
         {
                  isScanned = false;
         }

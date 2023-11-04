@@ -5,7 +5,6 @@ using UnityEngine;
 public class Marker : MonoBehaviour
 {
     public bool isPlaced;
-   public LayerMask Scannable;
 
     public void StartAction()
     {
@@ -17,14 +16,14 @@ public class Marker : MonoBehaviour
     public void ExitAction()
     {
         isPlaced = false;
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
         Debug.Log("isOut");
 
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (Scannable == (Scannable | (1 << other.gameObject.layer)))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Scannable"))
         {
             isPlaced = true;
         }
@@ -32,9 +31,10 @@ public class Marker : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (Scannable == (Scannable | (1 << other.gameObject.layer)))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Scannable"))
         {
             isPlaced = false;
         }
     }
 }
+

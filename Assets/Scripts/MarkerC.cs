@@ -15,8 +15,23 @@ public class MarkerC : MonoBehaviour
     public void ExitAction()
     {
         isPlaced = false;
-        Destroy(this.gameObject);
+        //gameObject.SetActive(false);
         Debug.Log("isOut");
 
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Scannable"))
+        {
+            isPlaced = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Scannable"))
+        {
+            isPlaced = false;
+        }
     }
 }

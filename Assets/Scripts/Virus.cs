@@ -52,5 +52,13 @@ public class Virus : MonoBehaviour
        
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        
+    }
+
 }

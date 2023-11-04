@@ -6,36 +6,72 @@ public class VirusTcell : MonoBehaviour
 {
     public CalculateDistance calculateDistance;
     public PlayerHealth playerHealth;
-    public Marker marker;
+   // public Marker marker;
     // The speed the T-Cells are moving towards the marker
     public float speed = 1.0f;
+    public List<GameObject> gameObjectsWithMarker = new List<GameObject>();
 
+    void Start()
+    {
+        // Find all GameObjects with the Marker script and add them to the list.
+   
+    }
+
+    public void FindGameObjectsWithMarker()
+    {
+        // Find all GameObjects in the scene with the Marker script.
+        Marker[] markers = FindObjectsOfType<Marker>();
+
+        // Add the GameObjects with the Marker script to the list.
+        foreach (Marker marker in markers)
+        {
+            gameObjectsWithMarker.Add(marker.gameObject);
+        }
+    }
     void Update()
     {
-        if (marker.isPlaced)
+        foreach (GameObject gameObjectWithMarker in gameObjectsWithMarker)
         {
-            // Move T-Cell a step closer to the virus
-            var step = speed * Time.deltaTime; // calculate distance to move
-            transform.position = Vector3.MoveTowards(transform.position, marker.transform.position, step);
+            // Get the MarkerB script from the GameObject.
+            Marker marker = gameObjectWithMarker.GetComponent<Marker>();
+
+            // Check if the marker's isPlaced property is true.
+            if (marker != null && marker.isPlaced)
+            {
+                // Move T-Cell towards the virus.
+                var step = speed * Time.deltaTime;
+                transform.position = Vector3.MoveTowards(transform.position, marker.transform.position, step);
+            }
         }
     }
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("VirusA"))
+        FindGameObjectsWithMarker();
+        foreach (GameObject gameObjectWithMarker in gameObjectsWithMarker)
         {
-            GetComponent<AudioSource>().Play();
-            playerHealth.Increase();
-            Destroy(other.gameObject);
-            marker.gameObject.SetActive(false);
-            calculateDistance.virusADestroyed = true; // this is only for virus a, u'll need to add those tags for the other two viruses
+            // Get the MarkerB script from the GameObject.
+            Marker marker = gameObjectWithMarker.GetComponent<Marker>();
+
+            // Check if the marker's isPlaced property is true.
+            if (marker != null && marker.isPlaced)
+            {
+                if (other.CompareTag("VirusA"))
+                {
+                    GetComponent<AudioSource>().Play();
+                    playerHealth.Increase();
+                    Destroy(other.gameObject);
+                    marker.gameObject.SetActive(false);
+                    calculateDistance.virusADestroyed = true; // this is only for virus a, you'll need to add those tags for the other two viruses
+                }
+                else
+                {
+                    GetComponent<AudioSource>().Play();
+                    playerHealth.Decrease();
+                    Destroy(this.gameObject);
+                    marker.gameObject.SetActive(false);
+                }
+                marker.isPlaced = false;
+            }
         }
-        else
-        {
-            GetComponent<AudioSource>().Play();
-            playerHealth.Decrease();
-            Destroy(this.gameObject);
-            marker.gameObject.SetActive(false);
-        }
-        marker.isPlaced = false;
     }
 }

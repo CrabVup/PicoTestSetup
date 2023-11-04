@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 285958176405020322}
   - component: {fileID: 3771825053741764871}
   - component: {fileID: 1422224539322066381}
-  - component: {fileID: 323507172640045391}
+  - component: {fileID: 2731845841755245615}
   - component: {fileID: 5436237290453101053}
   - component: {fileID: 8495606765037690131}
   - component: {fileID: 277766388476546152}
@@ -30,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 629446075367621656}
-  m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalRotation: {x: 0, y: -0.70710677, z: 0.70710677, w: 0}
   m_LocalPosition: {x: -0.019000053, y: 0.71650875, z: -42.265854}
   m_LocalScale: {x: 100, y: 99.999985, z: 99.999985}
   m_ConstrainProportionsScale: 0
@@ -38,7 +38,7 @@ Transform:
   - {fileID: 2258838157719996042}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 90}
+  m_LocalEulerAnglesHint: {x: 90, y: -90, z: 90}
 --- !u!33 &3771825053741764871
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -89,7 +89,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &323507172640045391
+--- !u!114 &2731845841755245615
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,9 +102,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlaced: 0
-  Scannable:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!54 &5436237290453101053
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -119,7 +116,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &8495606765037690131
 BoxCollider:

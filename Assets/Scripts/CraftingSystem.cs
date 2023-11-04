@@ -10,6 +10,9 @@ public class CraftingSystem : MonoBehaviour
     private CraftingRecipeSO craftingRecipeSO;
     public Transform itemSpawnPoint;
     public GameObject craftVfx;
+    public VirusTcell VT;
+    public VirusTcell2 VT2;
+    public VirusTcell3 VT3;
 
     private void Awake()
     {
@@ -24,6 +27,11 @@ public class CraftingSystem : MonoBehaviour
     void Update()
     {
         NextRecipe();
+
+        if(Input.GetKeyDown(KeyCode.Tab))
+        {
+            CraftVfx();
+        }
     }
     private void OnTriggerStay(Collider other)
     {
@@ -43,6 +51,7 @@ public class CraftingSystem : MonoBehaviour
     public void CraftVfx()
     {
         craftVfx.SetActive(true);
+      
         Invoke("Craft", 1f);
     }
     public void Craft()
@@ -82,6 +91,9 @@ public class CraftingSystem : MonoBehaviour
             }
         }
         craftVfx.SetActive(false);
+        VT.FindGameObjectsWithMarker();
+        VT2.FindGameObjectsWithMarkerB();
+        VT3.FindGameObjectsWithMarkerC();
 
     }
 }
