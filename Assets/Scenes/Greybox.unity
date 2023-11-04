@@ -3561,7 +3561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2023352893960385341, guid: a009b22af5de8844d88c071e8c248f90, type: 3}
       propertyPath: speed
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2023352893960385341, guid: a009b22af5de8844d88c071e8c248f90, type: 3}
       propertyPath: marker
@@ -3977,7 +3977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4778356092217557538, guid: ea3f92102b6c1114aaf4b31c9d8333a6, type: 3}
       propertyPath: speed
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4778356092217557538, guid: ea3f92102b6c1114aaf4b31c9d8333a6, type: 3}
       propertyPath: marker
@@ -5312,7 +5312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4917907760028585371, guid: 593787b5a7a0e2041a5a8179f639e75c, type: 3}
       propertyPath: speed
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4917907760028585371, guid: 593787b5a7a0e2041a5a8179f639e75c, type: 3}
       propertyPath: marker
@@ -9017,7 +9017,7 @@ GameObject:
   - component: {fileID: 1003187955}
   m_Layer: 8
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: ViruseB
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15468,7 +15468,7 @@ GameObject:
   - component: {fileID: 1560886079}
   m_Layer: 8
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: VirusA
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16352,7 +16352,7 @@ GameObject:
   - component: {fileID: 1714563956}
   m_Layer: 8
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: bacteria
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22546,7 +22546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2023352893960385341, guid: a009b22af5de8844d88c071e8c248f90, type: 3}
       propertyPath: speed
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2023352893960385341, guid: a009b22af5de8844d88c071e8c248f90, type: 3}
       propertyPath: marker
@@ -22989,11 +22989,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4778356092217557537, guid: ea3f92102b6c1114aaf4b31c9d8333a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 242.1
+      value: 260.6
       objectReference: {fileID: 0}
     - target: {fileID: 4778356092217557537, guid: ea3f92102b6c1114aaf4b31c9d8333a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 63.200005
+      value: 69.5
       objectReference: {fileID: 0}
     - target: {fileID: 4778356092217557537, guid: ea3f92102b6c1114aaf4b31c9d8333a6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23029,7 +23029,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4778356092217557538, guid: ea3f92102b6c1114aaf4b31c9d8333a6, type: 3}
       propertyPath: speed
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4778356092217557538, guid: ea3f92102b6c1114aaf4b31c9d8333a6, type: 3}
       propertyPath: marker
@@ -23110,7 +23110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4917907760028585371, guid: 593787b5a7a0e2041a5a8179f639e75c, type: 3}
       propertyPath: speed
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4917907760028585371, guid: 593787b5a7a0e2041a5a8179f639e75c, type: 3}
       propertyPath: marker
