@@ -3521,6 +3521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c17daede8e79fc4199599dba4b3b3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  calculateDistance: {fileID: 0}
   playerHealth: {fileID: 2036713945}
   info:
     Encode: sdas
@@ -3953,6 +3954,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4282627541286673464, guid: 590f812b9822c9d4caab0acf28f5f607, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5922806631656306451, guid: 590f812b9822c9d4caab0acf28f5f607, type: 3}
       propertyPath: m_Name
       value: TheNew_T-Cell
