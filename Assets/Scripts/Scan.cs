@@ -7,10 +7,13 @@ using TMPro;
 public class Scan : MonoBehaviour
 {
     public bool isScanned;
-    public GameObject notFinishedIcon;
+    public GameObject scannableIcon;
+
+    public GameObject lostTrackIcon;
     public GameObject finishedIcon;
 
     public Image scanningBar;
+
     public float fillSpeed = 1f; 
     public float currentValue;
 
@@ -24,15 +27,19 @@ public class Scan : MonoBehaviour
     public GameObject VirusC;
     public string VirusID;
 
+    public GameObject distanceA;
+    public GameObject distanceB;
+    public GameObject distanceC;
 
+    public bool isTracked;
     void Start()
     {
-        notFinishedIcon.SetActive(false);
+        scannableIcon.SetActive(false);
         finishedIcon.SetActive(false);
         VirusA.SetActive(false);
         VirusB.SetActive(false);
         VirusC.SetActive(false);
-
+        lostTrackIcon.SetActive(false);
 
     }
 
@@ -46,16 +53,34 @@ public class Scan : MonoBehaviour
             VirusA.SetActive(false);
             VirusB.SetActive(false);
             VirusC.SetActive(false);
+            distanceA.SetActive(true);
+            distanceB.SetActive(true);
+            distanceC.SetActive(true);
+            isTracked = false;
             Debug.Log("222");
         
         }
        
         if (isScanned == true)
         {
-            notFinishedIcon.SetActive(true);
-        }else
+            scannableIcon.SetActive(true);
+            distanceA.SetActive(false);
+            distanceB.SetActive(false);
+            distanceC.SetActive(false);
+            lostTrackIcon.SetActive(false);
+            scanningBar.color = Color.green;
+            isTracked = true;
+        }
+        else
         {
-            notFinishedIcon.SetActive(false);
+            scannableIcon.SetActive(false);
+            scanningBar.color = Color.red;
+            if (isTracked)
+            {
+                lostTrackIcon.SetActive(true);
+            }
+
+
         }
 
         if (currentValue == 0)
@@ -63,12 +88,18 @@ public class Scan : MonoBehaviour
             finishedIcon.SetActive(false);
             scanningBar.fillAmount = 0;
 
+
         }
 
         if (currentValue == 100)
         {
             finishedIcon.SetActive(true);
-            notFinishedIcon.SetActive(false);
+            scannableIcon.SetActive(false);
+            lostTrackIcon.SetActive(false);
+            scanningBar.color = Color.green;
+            isTracked = false;
+      
+
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -119,7 +150,7 @@ public class Scan : MonoBehaviour
             currentValue += fillSpeed * Time.deltaTime;
             currentValue = Mathf.Clamp(currentValue, 0f, 100f);
             scanningBar.fillAmount = currentValue / 100f;
-          
+     
         }
     
     }

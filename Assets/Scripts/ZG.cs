@@ -109,7 +109,7 @@ public class ZG : MonoBehaviour
         {
             rb.useGravity = false;
             movementScript.enabled = false; 
-            maxSpeed = 3;
+            maxSpeed = 2;
             speed = 100;
             downAndUpSpeed = 90;
             //rb.velocity = new Vector3(0, 0, 0);
