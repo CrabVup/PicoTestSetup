@@ -21,8 +21,7 @@ public struct VirusInfo
 public class Virus : MonoBehaviour
 {
 
-    public CalculateDistance calculateDistance;
-    public PlayerHealth playerHealth;
+   
     [SerializeField]
     public VirusInfo info;
     public string GetID()
@@ -53,14 +52,5 @@ public class Virus : MonoBehaviour
        
     }
 
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("VirusA"))
-        {
-            GetComponent<AudioSource>().Play();
-            playerHealth.Increase();
-            Destroy(this.gameObject);
-            calculateDistance.virusADestroyed = true; // this is only for virus a, u'll need to add those tags for the other two viruses
-        }
-    }
+    
 }
