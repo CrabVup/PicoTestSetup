@@ -200,8 +200,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   calculateDistance: {fileID: 2049221285894322418, guid: 9a95adf655961014ea7b4d7030eb4d90, type: 3}
   playerHealth: {fileID: 7046280373614874838, guid: b1395f9f3b338d747b07c54de4636c37, type: 3}
-  marker: {fileID: 723056399060463668, guid: 4c8ed3a6638d00e49915dfd7b8cf6ce7, type: 3}
-  speed: 8
+  speed: 5
+  gameObjectsWithMarkerC: []
 --- !u!1 &2300717869666795536
 GameObject:
   m_ObjectHideFlags: 0
