@@ -6,14 +6,18 @@ using TMPro;
 
 public class Qs : MonoBehaviour
 {
-    public Image image;
+    public Image scan_tick;
+    public Image craft_tick;
+    public Image kill_tick;
     public TextMeshProUGUI scan_count;
     public TextMeshProUGUI craft_count;
     public TextMeshProUGUI kill_count;
 
     private void Awake()
     {
-        image = GetComponent<UnityEngine.UI.Image>();
+        scan_tick = GetComponent<UnityEngine.UI.Image>();
+        craft_tick = GetComponent<UnityEngine.UI.Image>();
+        kill_tick = GetComponent<UnityEngine.UI.Image>();
     }
 
     // Start is called before the first frame update
@@ -29,19 +33,19 @@ public class Qs : MonoBehaviour
     {
         if (GameObject.Find("XR Origin").GetComponent<ZG>().isScanned == true)
         {
-            image.enabled = true;
+            scan_tick.enabled = true;
             scan_count.text = "1/1";
         }
 
         if (GameObject.Find("Push Button").GetComponent<CraftingSystem>().isCrafted == true)
         {
-            image.enabled = true;
+            craft_tick.enabled = true;
             craft_count.text = "1/1";
         }
 
         if (GameObject.Find("T-Cells").GetComponent<VirusTcell>().isKilled == true)
         {
-            image.enabled = true;
+            kill_tick.enabled = true;
             kill_count.text = "1/1";
         }
     }
