@@ -12291,6 +12291,9 @@ MonoBehaviour:
   scan_count: {fileID: 1562393298}
   craft_count: {fileID: 236469561}
   kill_count: {fileID: 1106277109}
+  TCells1: []
+  TCells2: []
+  TCells3: []
 --- !u!1 &1340703782
 GameObject:
   m_ObjectHideFlags: 0
@@ -22042,6 +22045,10 @@ PrefabInstance:
     - target: {fileID: 1337016929629504039, guid: 67dee605d72e2524c95c29785153d7f9, type: 3}
       propertyPath: m_Name
       value: Push Button (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337016929629504039, guid: 67dee605d72e2524c95c29785153d7f9, type: 3}
+      propertyPath: m_TagString
+      value: PushButton
       objectReference: {fileID: 0}
     - target: {fileID: 1644208429169499570, guid: 67dee605d72e2524c95c29785153d7f9, type: 3}
       propertyPath: m_RootOrder

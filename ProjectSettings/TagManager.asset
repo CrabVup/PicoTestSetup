@@ -22,6 +22,7 @@ TagManager:
   - T1
   - T2
   - T3
+  - PushButton
   layers:
   - Default
   - TransparentFX
