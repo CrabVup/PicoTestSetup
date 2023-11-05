@@ -27,11 +27,15 @@ public class ZG : MonoBehaviour
     public AudioSource scanSounds;
     public AudioClip scanPressed, scanReleased;
 
+    public bool isScanned;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         scanVFX.SetActive(false);
         scanVFX2.SetActive(false);
+
+        isScanned = false;
     }
 
     void Update()
@@ -46,7 +50,8 @@ public class ZG : MonoBehaviour
             if (scan.isScanned)
             {
                 scanVFX.SetActive(true);
-            }else
+                isScanned = true;
+}else
             {
                 scanVFX2.SetActive(true);
             }
