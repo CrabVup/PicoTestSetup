@@ -12366,6 +12366,9 @@ MonoBehaviour:
   TCells1: []
   TCells2: []
   TCells3: []
+  panel1: {fileID: 135392463}
+  panel2: {fileID: 312368179}
+  panel3: {fileID: 1287502267}
 --- !u!1 &1340703782
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,16 +6,25 @@ using TMPro;
 
 public class Qs : MonoBehaviour
 {
+    // TICK MARK 
     public Image scan_tick;
     public Image craft_tick;
     public Image kill_tick;
+
+    // THE TEXTS 0/1 - 1/1
     public TextMeshProUGUI scan_count;
     public TextMeshProUGUI craft_count;
     public TextMeshProUGUI kill_count;
 
+    // LISTS OF THE PREFABS
     public List<GameObject> TCells1 = new List<GameObject>();
     public List<GameObject> TCells2 = new List<GameObject>();
     public List<GameObject> TCells3 = new List<GameObject>();
+
+    // PANELS
+    public Image panel1;
+    public Image panel2;
+    public Image panel3;
 
     private void Awake()
     {
@@ -27,9 +36,12 @@ public class Qs : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       scan_count.text = "0/1";
-       craft_count.text = "0/1";
-       kill_count.text = "0/1";
+        scan_count.text = "0/1";
+        craft_count.text = "0/1";
+        kill_count.text = "0/1";
+        panel1 = GameObject.Find("Quest1").GetComponent<Image>();
+        panel2 = GameObject.Find("Quest2").GetComponent<Image>();
+        panel3 = GameObject.Find("Quest3").GetComponent<Image>();
     }
 
     // Update is called once per frame
@@ -39,12 +51,14 @@ public class Qs : MonoBehaviour
         {
             scan_tick.enabled = true;
             scan_count.text = "1/1";
+            panel1.color = UnityEngine.Color.green;
         }
         
         if (GameObject.FindWithTag("PushButton").GetComponent<CraftingSystem>().isCrafted == true)
         {
             craft_tick.enabled = true;
             craft_count.text = "1/1";
+            panel2.color = UnityEngine.Color.green;
         }
 
         Cells1();
@@ -82,6 +96,7 @@ public class Qs : MonoBehaviour
             {
                 kill_tick.enabled = true;
                 kill_count.text = "1/1";
+                panel3.color = UnityEngine.Color.green;
             }
         }
     }
@@ -116,6 +131,7 @@ public class Qs : MonoBehaviour
             {
                 kill_tick.enabled = true;
                 kill_count.text = "1/1";
+                panel3.color = UnityEngine.Color.green;
             }
         }
     }
@@ -150,6 +166,7 @@ public class Qs : MonoBehaviour
             {
                 kill_tick.enabled = true;
                 kill_count.text = "1/1";
+                panel3.color = UnityEngine.Color.green;
             }
         }
     }
