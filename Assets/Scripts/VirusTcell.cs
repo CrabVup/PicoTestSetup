@@ -6,6 +6,7 @@ public class VirusTcell : MonoBehaviour
 {
     public CalculateDistance calculateDistance;
     public PlayerHealth playerHealth;
+    public GameObject virusDeathVfx;
    // public Marker marker;
     // The speed the T-Cells are moving towards the marker
     public float speed = 1.0f;
@@ -17,6 +18,7 @@ public class VirusTcell : MonoBehaviour
     {
         // Find all GameObjects with the Marker script and add them to the list.
         isKilled = false;
+       
     }
 
     public void FindGameObjectsWithMarker()
@@ -74,6 +76,7 @@ public class VirusTcell : MonoBehaviour
                     GetComponent<AudioSource>().Play();
                     playerHealth.Increase();
                     Destroy(other.gameObject);
+                    Instantiate(virusDeathVfx,other.transform.position, Quaternion.identity);
                     isKilled = true;
                     marker.gameObject.SetActive(false);
                     calculateDistance.virusADestroyed = true; // this is only for virus a, you'll need to add those tags for the other two viruses

@@ -6,6 +6,7 @@ public class VirusTcell2 : MonoBehaviour
 {
     public CalculateDistance calculateDistance;
     public PlayerHealth playerHealth;
+    public GameObject virusDeathVfx;
     //public MarkerB marker;
     // The speed the T-Cells are moving towards the marker
     public float speed = 1.0f;
@@ -74,6 +75,7 @@ public class VirusTcell2 : MonoBehaviour
                     GetComponent<AudioSource>().Play();
                     playerHealth.Increase();
                     Destroy(other.gameObject);
+                    Instantiate(virusDeathVfx, other.transform.position, Quaternion.identity);
                     marker.gameObject.SetActive(false);
                     calculateDistance.virusADestroyed = true; // this is only for virus a, you'll need to add those tags for the other two viruses
                 }

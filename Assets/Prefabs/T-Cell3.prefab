@@ -200,9 +200,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   calculateDistance: {fileID: 2049221285894322418, guid: 9a95adf655961014ea7b4d7030eb4d90, type: 3}
   playerHealth: {fileID: 7046280373614874838, guid: b1395f9f3b338d747b07c54de4636c37, type: 3}
+  virusDeathVfx: {fileID: 5572347977654605173, guid: a6a1bc35280bfa14aae34000f4630f3e, type: 3}
   speed: 5
   gameObjectsWithMarkerC: []
-  craft: {fileID: 6259597831393802437, guid: 67dee605d72e2524c95c29785153d7f9, type: 3}
 --- !u!1 &2300717869666795536
 GameObject:
   m_ObjectHideFlags: 0

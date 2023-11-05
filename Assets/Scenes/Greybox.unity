@@ -4283,6 +4283,10 @@ PrefabInstance:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 887353193109439501, guid: 22211317e9975ec41957d2a02877e379, type: 3}
+      propertyPath: virusDeathVfx
+      value: 
+      objectReference: {fileID: 5572347977654605173, guid: 394a1d2acbc2d074dbdd711a73bc64c7, type: 3}
     - target: {fileID: 887353193355248851, guid: 22211317e9975ec41957d2a02877e379, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -10889,6 +10893,10 @@ PrefabInstance:
       propertyPath: speed
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 887353193109439501, guid: 22211317e9975ec41957d2a02877e379, type: 3}
+      propertyPath: virusDeathVfx
+      value: 
+      objectReference: {fileID: 5572347977654605173, guid: 394a1d2acbc2d074dbdd711a73bc64c7, type: 3}
     - target: {fileID: 887353193355248851, guid: 22211317e9975ec41957d2a02877e379, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -12205,7 +12213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1327090749
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16076,6 +16084,10 @@ PrefabInstance:
       propertyPath: speed
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 887353193109439501, guid: 22211317e9975ec41957d2a02877e379, type: 3}
+      propertyPath: virusDeathVfx
+      value: 
+      objectReference: {fileID: 5572347977654605173, guid: 394a1d2acbc2d074dbdd711a73bc64c7, type: 3}
     - target: {fileID: 887353193355248851, guid: 22211317e9975ec41957d2a02877e379, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -18568,6 +18580,10 @@ PrefabInstance:
       propertyPath: speed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 887353193109439501, guid: 22211317e9975ec41957d2a02877e379, type: 3}
+      propertyPath: virusDeathVfx
+      value: 
+      objectReference: {fileID: 5572347977654605173, guid: 394a1d2acbc2d074dbdd711a73bc64c7, type: 3}
     - target: {fileID: 887353193355248851, guid: 22211317e9975ec41957d2a02877e379, type: 3}
       propertyPath: m_RootOrder
       value: 0
