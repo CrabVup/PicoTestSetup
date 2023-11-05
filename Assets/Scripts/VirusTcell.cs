@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX.Utility;
+using UnityEngine.VFX;
 
 public class VirusTcell : MonoBehaviour
 {
     public CalculateDistance calculateDistance;
     public PlayerHealth playerHealth;
     public GameObject virusDeathVfx;
-   // public Marker marker;
+    public VisualEffect lineVfx;
+    public VFXTransformBinderExternal vfxPositionBinder;
+    // public Marker marker;
     // The speed the T-Cells are moving towards the marker
     public float speed = 1.0f;
     public List<GameObject> gameObjectsWithMarker = new List<GameObject>();
@@ -18,7 +22,9 @@ public class VirusTcell : MonoBehaviour
     {
         // Find all GameObjects with the Marker script and add them to the list.
         isKilled = false;
-       
+        lineVfx.Stop();
+       // vfxPositionBinder.GetComponent<VFXPositionBinder>();
+        
     }
 
     public void FindGameObjectsWithMarker()
@@ -41,7 +47,11 @@ public class VirusTcell : MonoBehaviour
                 // Add the marker to the set of processed markers.
                 processedMarkers.Add(marker);
             }
+
+            vfxPositionBinder.Target = marker.transform;
         }
+
+        
     }
     void Update()
     {
@@ -54,6 +64,7 @@ public class VirusTcell : MonoBehaviour
             // Check if the marker's isPlaced property is true.
             if (marker != null && marker.isPlaced)
             {
+                lineVfx.Play();
                 // Move T-Cell towards the virus.
                 var step = speed * Time.deltaTime;
                 transform.position = Vector3.MoveTowards(transform.position, marker.transform.position, step);
@@ -91,5 +102,7 @@ public class VirusTcell : MonoBehaviour
                 marker.isPlaced = false;
             }
         }
+
+        lineVfx.Stop();
     }
 }
