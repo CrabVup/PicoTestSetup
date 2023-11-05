@@ -10,8 +10,10 @@ public class CraftingSystem : MonoBehaviour
     private CraftingRecipeSO craftingRecipeSO;
     public Transform itemSpawnPoint;
     public GameObject craftVfx;
-    public bool isCreated;
-  
+ 
+    public List<VirusTcell> virusTcells;
+    public List<VirusTcell2> virusTcells2;
+    public List<VirusTcell3> virusTcells3;
 
     private void Awake()
     {
@@ -84,13 +86,25 @@ public class CraftingSystem : MonoBehaviour
             Debug.Log("Yes");
             Instantiate(craftingRecipeSO.outputItemSO, itemSpawnPoint.position, itemSpawnPoint.rotation);
             //Instantiate(craftingVFX, itemSpawnPoint.position, itemSpawnPoint.rotation);
-            isCreated = true;
+        
             foreach (GameObject consumeItemGameObject in consumeItemGameObjectList)
             {
                 Destroy(consumeItemGameObject);
             }
         }
         craftVfx.SetActive(false);
-        isCreated = false;
+        foreach (VirusTcell virusTcell in virusTcells)
+        {
+            virusTcell.FindGameObjectsWithMarker();
+        }
+        foreach (VirusTcell2 virusTcell2 in virusTcells2)
+        {
+            virusTcell2.FindGameObjectsWithMarkerB();
+        }
+        foreach (VirusTcell3 virusTcell3 in virusTcells3)
+        {
+            virusTcell3.FindGameObjectsWithMarkerC();
+        }
+
     }
 }
