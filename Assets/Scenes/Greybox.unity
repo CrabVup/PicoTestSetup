@@ -20923,6 +20923,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2049221284106403455, guid: 9a95adf655961014ea7b4d7030eb4d90, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049221284448461636, guid: 9a95adf655961014ea7b4d7030eb4d90, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049221284732160850, guid: 9a95adf655961014ea7b4d7030eb4d90, type: 3}
+      propertyPath: m_margin.x
+      value: -0.3022461
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049221284732160850, guid: 9a95adf655961014ea7b4d7030eb4d90, type: 3}
+      propertyPath: m_margin.z
+      value: -8.389068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049221284732160852, guid: 9a95adf655961014ea7b4d7030eb4d90, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049221284770237185, guid: 9a95adf655961014ea7b4d7030eb4d90, type: 3}
+      propertyPath: m_margin.x
+      value: -0.14768505
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049221284770237185, guid: 9a95adf655961014ea7b4d7030eb4d90, type: 3}
+      propertyPath: m_margin.z
+      value: -6.359332
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049221284770237187, guid: 9a95adf655961014ea7b4d7030eb4d90, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049221285012693230, guid: 9a95adf655961014ea7b4d7030eb4d90, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049221285044472329, guid: 9a95adf655961014ea7b4d7030eb4d90, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049221285393287732, guid: 9a95adf655961014ea7b4d7030eb4d90, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2049221285894322418, guid: 9a95adf655961014ea7b4d7030eb4d90, type: 3}
       propertyPath: virusA
       value: 
@@ -20935,6 +20979,10 @@ PrefabInstance:
       propertyPath: bacteria
       value: 
       objectReference: {fileID: 1890794913}
+    - target: {fileID: 2049221285894322418, guid: 9a95adf655961014ea7b4d7030eb4d90, type: 3}
+      propertyPath: virusADestroyed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2049221285894322420, guid: 9a95adf655961014ea7b4d7030eb4d90, type: 3}
       propertyPath: m_RootOrder
       value: 19

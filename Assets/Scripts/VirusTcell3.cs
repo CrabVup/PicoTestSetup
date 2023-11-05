@@ -35,7 +35,7 @@ public class VirusTcell3 : MonoBehaviour
         foreach (GameObject gameObjectWithMarkerC in gameObjectsWithMarkerC)
         {
             // Get the Marker script from the GameObject.
-            Marker marker = gameObjectWithMarkerC.GetComponent<Marker>();
+            MarkerC marker = gameObjectWithMarkerC.GetComponent<MarkerC>();
 
             // Check if the marker's isPlaced property is true.
             if (marker != null && marker.isPlaced)
@@ -59,7 +59,7 @@ public class VirusTcell3 : MonoBehaviour
         foreach (GameObject gameObjectWithMarkerC in gameObjectsWithMarkerC)
         {
             // Get the Marker script from the GameObject.
-            Marker marker = gameObjectWithMarkerC.GetComponent<Marker>();
+            MarkerC marker = gameObjectWithMarkerC.GetComponent<MarkerC>();
 
             // Check if the marker's isPlaced property is true.
             if (marker != null && marker.isPlaced)
