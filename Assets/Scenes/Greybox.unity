@@ -1760,7 +1760,7 @@ GameObject:
   - component: {fileID: 236469562}
   - component: {fileID: 236469561}
   m_Layer: 0
-  m_Name: Text (TMP) (1)
+  m_Name: Craft_Count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10105,7 +10105,7 @@ GameObject:
   - component: {fileID: 1106277110}
   - component: {fileID: 1106277109}
   m_Layer: 0
-  m_Name: Text (TMP) (1)
+  m_Name: Kill_Count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14567,7 +14567,7 @@ GameObject:
   - component: {fileID: 1562393299}
   - component: {fileID: 1562393298}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Scan_Count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
