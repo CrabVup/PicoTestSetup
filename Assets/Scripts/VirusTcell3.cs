@@ -19,13 +19,24 @@ public class VirusTcell3 : MonoBehaviour
 
     public void FindGameObjectsWithMarkerC()
     {
-        // Find all GameObjects in the scene with the Marker script.
         MarkerC[] markers = FindObjectsOfType<MarkerC>();
 
-        // Add the GameObjects with the Marker script to the list.
+        // Clear the existing list as we are going to update it.
+        gameObjectsWithMarkerC.Clear();
+
+        // Create a set to keep track of markers you've already processed.
+        HashSet<MarkerC> processedMarkers = new HashSet<MarkerC>();
+
         foreach (MarkerC marker in markers)
         {
-            gameObjectsWithMarkerC.Add(marker.gameObject);
+            // Check if we've already processed this marker.
+            if (!processedMarkers.Contains(marker))
+            {
+                gameObjectsWithMarkerC.Add(marker.gameObject);
+
+                // Add the marker to the set of processed markers.
+                processedMarkers.Add(marker);
+            }
         }
     }
     void Update()
