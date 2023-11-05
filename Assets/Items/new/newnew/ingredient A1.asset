@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67ea9ae4c1f88db4d9495438abf2789d, type: 3}
   m_Name: ingredient A1
   m_EditorClassIdentifier: 
-  itemName: {fileID: 9108212828513086457, guid: 8c7909b24c02843439c93128f14514df, type: 3}
+  itemName: {fileID: 6398419797597599671, guid: 8c7909b24c02843439c93128f14514df, type: 3}

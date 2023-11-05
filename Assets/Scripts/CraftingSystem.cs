@@ -28,7 +28,7 @@ public class CraftingSystem : MonoBehaviour
     void Update()
     {
        
-            NextRecipe();
+            //NextRecipe();
         if(Input.GetKeyDown(KeyCode.Tab))
         {
             CraftVfx();
@@ -52,7 +52,7 @@ public class CraftingSystem : MonoBehaviour
     public void CraftVfx()
     {
         craftVfx.SetActive(true);
-    
+        NextRecipe();
         Invoke("Craft", 1f);
     }
     public void Craft()
