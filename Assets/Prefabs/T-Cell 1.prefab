@@ -254,6 +254,7 @@ MonoBehaviour:
   playerHealth: {fileID: 7046280373614874838, guid: b1395f9f3b338d747b07c54de4636c37, type: 3}
   speed: 5
   gameObjectsWithMarker: []
+  craft: {fileID: 6259597831393802437, guid: 67dee605d72e2524c95c29785153d7f9, type: 3}
 --- !u!1001 &887353193591862455
 PrefabInstance:
   m_ObjectHideFlags: 0

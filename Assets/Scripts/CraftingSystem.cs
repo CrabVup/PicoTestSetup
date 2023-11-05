@@ -10,9 +10,8 @@ public class CraftingSystem : MonoBehaviour
     private CraftingRecipeSO craftingRecipeSO;
     public Transform itemSpawnPoint;
     public GameObject craftVfx;
-    public VirusTcell VT;
-    public VirusTcell2 VT2;
-    public VirusTcell3 VT3;
+    public bool isCreated;
+  
 
     private void Awake()
     {
@@ -26,8 +25,8 @@ public class CraftingSystem : MonoBehaviour
    
     void Update()
     {
-        NextRecipe();
-
+       
+            NextRecipe();
         if(Input.GetKeyDown(KeyCode.Tab))
         {
             CraftVfx();
@@ -51,7 +50,7 @@ public class CraftingSystem : MonoBehaviour
     public void CraftVfx()
     {
         craftVfx.SetActive(true);
-      
+    
         Invoke("Craft", 1f);
     }
     public void Craft()
@@ -85,15 +84,13 @@ public class CraftingSystem : MonoBehaviour
             Debug.Log("Yes");
             Instantiate(craftingRecipeSO.outputItemSO, itemSpawnPoint.position, itemSpawnPoint.rotation);
             //Instantiate(craftingVFX, itemSpawnPoint.position, itemSpawnPoint.rotation);
+            isCreated = true;
             foreach (GameObject consumeItemGameObject in consumeItemGameObjectList)
             {
                 Destroy(consumeItemGameObject);
             }
         }
         craftVfx.SetActive(false);
-        VT.FindGameObjectsWithMarker();
-        VT2.FindGameObjectsWithMarkerB();
-        VT3.FindGameObjectsWithMarkerC();
-
+        isCreated = false;
     }
 }

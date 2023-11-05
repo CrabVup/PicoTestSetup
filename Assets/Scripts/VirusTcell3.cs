@@ -10,7 +10,7 @@ public class VirusTcell3 : MonoBehaviour
     // The speed the T-Cells are moving towards the marker
     public float speed = 1.0f;
     public List<GameObject> gameObjectsWithMarkerC = new List<GameObject>();
-
+    public CraftingSystem craft;
     void Start()
     {
         // Find all GameObjects with the Marker script and add them to the list.
@@ -30,6 +30,11 @@ public class VirusTcell3 : MonoBehaviour
     }
     void Update()
     {
+        if (craft.isCreated)
+        {
+            FindGameObjectsWithMarkerC();
+        }
+
         foreach (GameObject gameObjectWithMarkerC in gameObjectsWithMarkerC)
         {
             // Get the Marker script from the GameObject.
@@ -53,7 +58,7 @@ public class VirusTcell3 : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        FindGameObjectsWithMarkerC();
+     
         foreach (GameObject gameObjectWithMarkerC in gameObjectsWithMarkerC)
         {
             // Get the Marker script from the GameObject.
