@@ -12213,7 +12213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1327090749
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12285,10 +12285,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d3f943bcfd5ee94780e41f2e9c4261c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 567543386}
+  scan_tick: {fileID: 567543386}
+  craft_tick: {fileID: 2108700421}
+  kill_tick: {fileID: 77527225}
   scan_count: {fileID: 1562393298}
-  craft_count: {fileID: 0}
-  kill_count: {fileID: 0}
+  craft_count: {fileID: 236469561}
+  kill_count: {fileID: 1106277109}
 --- !u!1 &1340703782
 GameObject:
   m_ObjectHideFlags: 0

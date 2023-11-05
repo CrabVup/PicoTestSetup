@@ -43,7 +43,7 @@ public class Qs : MonoBehaviour
             craft_count.text = "1/1";
         }
 
-        if (GameObject.Find("T-Cells").GetComponent<VirusTcell>().isKilled == true)
+        if ((GameObject.Find("T-Cell 1").GetComponent<VirusTcell>().isKilled == true) || (GameObject.Find("T-Cell 1 (1)").GetComponent<VirusTcell>().isKilled == true) || (GameObject.Find("T-Cell 1 (2)").GetComponent<VirusTcell>().isKilled == true) || (GameObject.Find("T-Cell 1 (3)").GetComponent<VirusTcell>().isKilled == true))
         {
             kill_tick.enabled = true;
             kill_count.text = "1/1";
