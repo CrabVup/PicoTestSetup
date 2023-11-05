@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX.Utility;
+using UnityEngine.VFX;
 
 public class VirusTcell2 : MonoBehaviour
 {
     public CalculateDistance calculateDistance;
     public PlayerHealth playerHealth;
     public GameObject virusDeathVfx;
-    public GameObject lineVfx;
+    public VisualEffect lineVfx;
+    public static bool isPath;
     public VFXTransformBinderExternal vfxPositionBinder;
     //public MarkerB marker;
     // The speed the T-Cells are moving towards the marker
@@ -21,7 +23,7 @@ public class VirusTcell2 : MonoBehaviour
     {
         // Find all GameObjects with the Marker script and add them to the list.
        isKilled = false;
-        lineVfx.SetActive(false);
+        isPath = false;
        // vfxPositionBinder.GetComponent<VFXPositionBinder>();
     }
 
@@ -51,7 +53,14 @@ public class VirusTcell2 : MonoBehaviour
     }
     void Update()
     {
-    
+        if (isPath)
+        {
+            lineVfx.enabled = true;
+        }
+        else
+        {
+            lineVfx.enabled = false;
+        }
         foreach (GameObject gameObjectWithMarkerB in gameObjectsWithMarkerB)
         {
             // Get the MarkerB script from the GameObject.
@@ -60,7 +69,7 @@ public class VirusTcell2 : MonoBehaviour
             // Check if the marker's isPlaced property is true.
             if (marker != null && marker.isPlaced)
             {
-                lineVfx.SetActive(true);
+                isPath = true;
                 // Move T-Cell towards the virus.
                 var step = speed * Time.deltaTime;
                 transform.position = Vector3.MoveTowards(transform.position, marker.transform.position, step);
@@ -96,8 +105,9 @@ public class VirusTcell2 : MonoBehaviour
                     marker.gameObject.SetActive(false);
                 }
                 marker.isPlaced = false;
+                isPath = false;
             }
         }
-        lineVfx.SetActive(false);
+       
     }
 }

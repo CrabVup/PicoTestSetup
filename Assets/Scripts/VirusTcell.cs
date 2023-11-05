@@ -10,6 +10,7 @@ public class VirusTcell : MonoBehaviour
     public PlayerHealth playerHealth;
     public GameObject virusDeathVfx;
     public VisualEffect lineVfx;
+    public static bool isPath;
     public VFXTransformBinderExternal vfxPositionBinder;
     // public Marker marker;
     // The speed the T-Cells are moving towards the marker
@@ -22,7 +23,7 @@ public class VirusTcell : MonoBehaviour
     {
         // Find all GameObjects with the Marker script and add them to the list.
         isKilled = false;
-        lineVfx.Stop();
+        isPath = false;
        // vfxPositionBinder.GetComponent<VFXPositionBinder>();
         
     }
@@ -55,7 +56,13 @@ public class VirusTcell : MonoBehaviour
     }
     void Update()
     {
-      
+        if (isPath)
+        {
+            lineVfx.enabled = true;
+        }else
+        {
+            lineVfx.enabled = false;
+        }
         foreach (GameObject gameObjectWithMarker in gameObjectsWithMarker)
         {
             // Get the MarkerB script from the GameObject.
@@ -64,7 +71,7 @@ public class VirusTcell : MonoBehaviour
             // Check if the marker's isPlaced property is true.
             if (marker != null && marker.isPlaced)
             {
-                lineVfx.Play();
+                isPath = true;
                 // Move T-Cell towards the virus.
                 var step = speed * Time.deltaTime;
                 transform.position = Vector3.MoveTowards(transform.position, marker.transform.position, step);
@@ -82,6 +89,7 @@ public class VirusTcell : MonoBehaviour
             // Check if the marker's isPlaced property is true.
             if (marker != null && marker.isPlaced)
             {
+               
                 if (other.CompareTag("VirusA"))
                 {
                     GetComponent<AudioSource>().Play();
@@ -100,9 +108,10 @@ public class VirusTcell : MonoBehaviour
                     marker.gameObject.SetActive(false);
                 }
                 marker.isPlaced = false;
+                isPath = false;
             }
         }
 
-        lineVfx.Stop();
+    
     }
 }
