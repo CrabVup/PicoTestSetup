@@ -16283,7 +16283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   downAndUpSpeed: 80
   speed: 100
-  maxSpeed: 1.5
+  maxSpeed: 3
   mainCamera: {fileID: 64765833}
   scan: {fileID: 1728667543}
   scanVFX: {fileID: 1165939572}
