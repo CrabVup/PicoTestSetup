@@ -11,10 +11,12 @@ public class VirusTcell : MonoBehaviour
     public float speed = 1.0f;
     public List<GameObject> gameObjectsWithMarker = new List<GameObject>();
 
+    public bool isKilled;
+
     void Start()
     {
         // Find all GameObjects with the Marker script and add them to the list.
-   
+        isKilled = false;
     }
 
     public void FindGameObjectsWithMarker()
@@ -72,6 +74,7 @@ public class VirusTcell : MonoBehaviour
                     GetComponent<AudioSource>().Play();
                     playerHealth.Increase();
                     Destroy(other.gameObject);
+                    isKilled = true;
                     marker.gameObject.SetActive(false);
                     calculateDistance.virusADestroyed = true; // this is only for virus a, you'll need to add those tags for the other two viruses
                 }

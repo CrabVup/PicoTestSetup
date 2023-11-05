@@ -12277,8 +12277,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d3f943bcfd5ee94780e41f2e9c4261c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
-  scan_count: {fileID: 0}
+  image: {fileID: 567543386}
+  scan_count: {fileID: 1562393298}
 --- !u!1 &1340703782
 GameObject:
   m_ObjectHideFlags: 0

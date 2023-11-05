@@ -15,6 +15,8 @@ public class CraftingSystem : MonoBehaviour
     public List<VirusTcell2> virusTcells2;
     public List<VirusTcell3> virusTcells3;
 
+    public bool isCrafted;
+
     private void Awake()
     {
         //NextRecipe();
@@ -23,6 +25,8 @@ public class CraftingSystem : MonoBehaviour
     {
         GetComponent<XRSimpleInteractable>().selectEntered.AddListener(x => CraftVfx());
         craftVfx.SetActive(false);
+
+        isCrafted = false;
     }
    
     void Update()
@@ -52,6 +56,7 @@ public class CraftingSystem : MonoBehaviour
     public void CraftVfx()
     {
         craftVfx.SetActive(true);
+        isCrafted = true;
         NextRecipe();
         Invoke("Craft", 1f);
     }
