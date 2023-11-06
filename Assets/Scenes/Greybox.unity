@@ -4903,7 +4903,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &617886033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17745,8 +17745,6 @@ MonoBehaviour:
   movementScript: {fileID: 1853847395}
   stationCollider: {fileID: 715552666}
   scanning: {fileID: 661864922}
-  scanFail: {fileID: 1018821030}
-  scanSuccess: {fileID: 709990318}
   isScanned: 0
 --- !u!82 &1853847405
 AudioSource:
