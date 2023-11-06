@@ -13878,7 +13878,7 @@ MonoBehaviour:
   panel1: {fileID: 135392463}
   panel2: {fileID: 312368179}
   panel3: {fileID: 1287502267}
-  scanScript: {fileID: 1728667543}
+  virusA: {fileID: 6504990091837022669}
 --- !u!1 &1340703782
 GameObject:
   m_ObjectHideFlags: 0
@@ -18938,6 +18938,7 @@ MonoBehaviour:
     Amount: 0.005 ng
     Infectivity: RO = 2
     VirusName: C
+    isScanned: 0
 --- !u!136 &1890794917
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -19871,9 +19872,7 @@ MonoBehaviour:
   firstScan: {fileID: 0}
   scannedViruses: 0
   isTracked: 0
-  scannedA: 0
-  scannedB: 0
-  scannedC: 0
+  scanner: {fileID: 0}
 --- !u!114 &1930816441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24645,6 +24644,7 @@ MonoBehaviour:
     Amount: 0.067 ng
     Infectivity: RO = 5
     VirusName: A
+    isScanned: 0
 --- !u!135 &6504990091837022673
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -25099,6 +25099,7 @@ MonoBehaviour:
     Amount: 0.02 ng
     Infectivity: RO = 1.87
     VirusName: B
+    isScanned: 0
 --- !u!54 &7719518208117309029
 Rigidbody:
   m_ObjectHideFlags: 0

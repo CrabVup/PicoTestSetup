@@ -28,9 +28,6 @@ public class Qs : MonoBehaviour
     public Image panel2;
     public Image panel3;
 
-    // VIRUSES SCANNED
-    public Scan scanScript;
-
     public GameObject virusA;
 
 
