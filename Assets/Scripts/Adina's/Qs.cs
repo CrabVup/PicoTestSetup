@@ -39,6 +39,9 @@ public class Qs : MonoBehaviour
         scan_count.text = "0/1";
         craft_count.text = "0/1";
         kill_count.text = "0/1";
+        scan_tick = GameObject.Find("tickMark").GetComponent<Image>();
+        craft_tick = GameObject.Find("tickMark (1)").GetComponent<Image>();
+        kill_tick = GameObject.Find("tickMark (2)").GetComponent<Image>();
         panel1 = GameObject.Find("Quest1").GetComponent<Image>();
         panel2 = GameObject.Find("Quest2").GetComponent<Image>();
         panel3 = GameObject.Find("Quest3").GetComponent<Image>();
