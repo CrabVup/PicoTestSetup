@@ -81,11 +81,11 @@ public class Scan : MonoBehaviour
         {
             scannableIcon.SetActive(false);
             scanningBar.color = Color.red;
-            scanFail.Play();
+          
             if (isTracked)
             {
                 lostTrackIcon.SetActive(true);
-              
+                scanFail.Play();
             }
 
         }
