@@ -60,7 +60,19 @@ public class Qs : MonoBehaviour
     void Update()
     {
 
-        if (/*virusA.GetComponent<Virus>().isScanned == true*/ scan_tick.enabled == false) // RANDOM IF 
+        /* if (virusA.GetComponent<Virus>().isScanned == true scan_tick.enabled == false) // RANDOM IF 
+         {
+             scan_count.text = scanned_counter.ToString();
+             if (scan_count.text == "3/3")
+             {
+                 scan_tick.enabled = true;
+                 panel1.color = UnityEngine.Color.green;
+             }
+         }*/
+
+        bool isScanned = virusA.GetComponent<Virus>().IsScanned();
+
+        if (!isScanned)
         {
             scan_count.text = scanned_counter.ToString();
             if (scan_count.text == "3/3")
