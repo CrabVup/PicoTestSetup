@@ -24,7 +24,7 @@ public class ZG : MonoBehaviour
     public ContinuousMoveProviderBase movementScript;
     public BoxCollider stationCollider;
 
-    public AudioSource scanning, scanFail, scanSuccess;
+    public AudioSource scanning;
 
     public bool isScanned;
 
@@ -51,11 +51,11 @@ public class ZG : MonoBehaviour
             {
                 scanVFX.SetActive(true);
                 isScanned = true;
-                scanSuccess.Play();
+
 }else
             {
                 scanVFX2.SetActive(true);
-                scanFail.Play();
+
             }
 
         }
