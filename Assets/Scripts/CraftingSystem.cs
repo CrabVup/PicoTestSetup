@@ -15,6 +15,8 @@ public class CraftingSystem : MonoBehaviour
     public List<VirusTcell2> virusTcells2;
     public List<VirusTcell3> virusTcells3;
 
+    public AudioSource craftDone;
+
     public bool isCrafted;
 
     private void Awake()
@@ -89,6 +91,7 @@ public class CraftingSystem : MonoBehaviour
         if (inputItemList.Count == 0)
         {
             Debug.Log("Yes");
+            craftDone.Play();
             Instantiate(craftingRecipeSO.outputItemSO, itemSpawnPoint.position, itemSpawnPoint.rotation);
             //Instantiate(craftingVFX, itemSpawnPoint.position, itemSpawnPoint.rotation);
         
