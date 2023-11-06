@@ -31,6 +31,8 @@ public class Scan : MonoBehaviour
     public GameObject distanceB;
     public GameObject distanceC;
 
+    public AudioSource scanFail, scanSuccess;
+
     public bool isTracked;
     void Start()
     {
@@ -79,8 +81,8 @@ public class Scan : MonoBehaviour
             if (isTracked)
             {
                 lostTrackIcon.SetActive(true);
+                scanFail.Play();
             }
-
 
         }
 
@@ -88,7 +90,6 @@ public class Scan : MonoBehaviour
         {
             finishedIcon.SetActive(false);
             scanningBar.fillAmount = 0;
-
 
         }
 
@@ -99,7 +100,7 @@ public class Scan : MonoBehaviour
             lostTrackIcon.SetActive(false);
             scanningBar.color = Color.green;
             isTracked = false;
-      
+            scanSuccess.Play();
 
         }
     }
