@@ -100,3 +100,7 @@
 [2023-11-05 23:44:12.454] [pxr_streamer] [error] rpc_terminal.cpp:37 operator (): connect failed, error= 由于目标计算机积极拒绝，无法连接。, this = 0x12533a50
 [2023-11-05 23:44:15.218] [pxr_streamer] [error] rpc_terminal.cpp:37 operator (): connect failed, error= 由于目标计算机积极拒绝，无法连接。, this = 0xcf457e10
 [2023-11-05 23:44:15.473] [pxr_streamer] [error] rpc_terminal.cpp:37 operator (): connect failed, error= 由于目标计算机积极拒绝，无法连接。, this = 0x12533a50
+[2023-11-05 23:44:18.243] [pxr_streamer] [error] rpc_terminal.cpp:37 operator (): connect failed, error= 由于目标计算机积极拒绝，无法连接。, this = 0xcf457e10
+[2023-11-05 23:44:18.512] [pxr_streamer] [error] rpc_terminal.cpp:37 operator (): connect failed, error= 由于目标计算机积极拒绝，无法连接。, this = 0x12533a50
+[2023-11-05 23:44:21.266] [pxr_streamer] [error] rpc_terminal.cpp:37 operator (): connect failed, error= 由于目标计算机积极拒绝，无法连接。, this = 0xcf457e10
+[2023-11-05 23:44:21.537] [pxr_streamer] [error] rpc_terminal.cpp:37 operator (): connect failed, error= 由于目标计算机积极拒绝，无法连接。, this = 0x12533a50
