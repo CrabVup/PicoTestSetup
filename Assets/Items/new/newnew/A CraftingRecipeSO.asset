@@ -15,4 +15,4 @@ MonoBehaviour:
   inputItemSOList:
   - {fileID: 11400000, guid: c40f211cfb2fba24bba89967996a8a85, type: 2}
   - {fileID: 11400000, guid: 821717d8d763bcc40861d4d3edfc1b9d, type: 2}
-  outputItemSO: {fileID: 629446075367621656, guid: b137cfb3d3864954fa3a3837e93698f9, type: 3}
+  outputItemSO: {fileID: 1678314369765975341, guid: 68dd4182bf7929548baeb8b27db5769c, type: 3}
