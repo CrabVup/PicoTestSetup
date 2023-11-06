@@ -73,11 +73,13 @@ public class Scan : MonoBehaviour
             lostTrackIcon.SetActive(false);
             scanningBar.color = Color.green;
             isTracked = true;
+
         }
         else
         {
             scannableIcon.SetActive(false);
             scanningBar.color = Color.red;
+
             if (isTracked)
             {
                 lostTrackIcon.SetActive(true);
