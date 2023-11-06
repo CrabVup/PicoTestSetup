@@ -65,10 +65,7 @@ public class Scan : MonoBehaviour
         
         }
        
-        if (isScanned == false)
-        {
-            scanFail.Play();
-        }
+     
         if (isScanned == true)
         {
             scannableIcon.SetActive(true);
@@ -150,6 +147,7 @@ public class Scan : MonoBehaviour
         if (other.gameObject.layer == LayerMask.NameToLayer("Scannable"))
         {
                  isScanned = false;
+            scanFail.Play();
         }
     }
     public void GetInfo()
