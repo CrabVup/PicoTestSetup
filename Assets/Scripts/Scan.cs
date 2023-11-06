@@ -85,7 +85,7 @@ public class Scan : MonoBehaviour
             if (isTracked)
             {
                 lostTrackIcon.SetActive(true);
-                scanFail.Play();
+               // scanFail.Play();
             }
 
         }
@@ -149,6 +149,10 @@ public class Scan : MonoBehaviour
         {
                  isScanned = false;
            // scanFail.Play();
+           if (isTracked)
+            {
+                scanFail.Play();
+            }
         }
     }
     public void GetInfo()
