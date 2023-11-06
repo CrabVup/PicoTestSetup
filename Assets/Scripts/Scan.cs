@@ -177,24 +177,31 @@ public class Scan : MonoBehaviour
             if (currentValue >= 100)
             {
                 scanSuccess.Play();
-                if (VirusID == "A")
+                FirstScannedVirusAudio();
+            } else
+            {
+                if (currentValue == 100)
                 {
-                    scannedA = true;
-                } else
-                {
-                    if (VirusID == "B")
+                    if (VirusID == "A")
                     {
-                        scannedB = true;
-                    }
-                    else
+                        scannedA = true;
+
+                    } else
                     {
-                        if (VirusID == "C")
+                        if (VirusID == "B")
                         {
-                            scannedC = true;
+                            scannedB = true;
+
+                        }
+                        else
+                        {
+                            if (VirusID == "C")
+                            {
+                                scannedC = true;
+                            }
                         }
                     }
                 }
-                    FirstScannedVirusAudio();
             }
 
 

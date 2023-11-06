@@ -1954,7 +1954,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0/3
+  m_text: /3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11435,7 +11435,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0/3
+  m_text: /3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13871,12 +13871,14 @@ MonoBehaviour:
   scan_count: {fileID: 1562393298}
   craft_count: {fileID: 236469561}
   kill_count: {fileID: 1106277109}
+  scanned_counter: 0
   TCells1: []
   TCells2: []
   TCells3: []
   panel1: {fileID: 135392463}
   panel2: {fileID: 312368179}
   panel3: {fileID: 1287502267}
+  scanScript: {fileID: 1728667543}
 --- !u!1 &1340703782
 GameObject:
   m_ObjectHideFlags: 0
@@ -16339,7 +16341,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0/3
+  m_text: /3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18526,6 +18528,7 @@ MonoBehaviour:
   firstKill: {fileID: 1341095901}
   lastKill: {fileID: 1061795114}
   tcellDeath: {fileID: 629195852}
+  tcellDeathEnd: {fileID: 0}
   virusKilled: 0
 --- !u!1 &1858219407
 GameObject:
@@ -19868,6 +19871,9 @@ MonoBehaviour:
   firstScan: {fileID: 0}
   scannedViruses: 0
   isTracked: 0
+  scannedA: 0
+  scannedB: 0
+  scannedC: 0
 --- !u!114 &1930816441
 MonoBehaviour:
   m_ObjectHideFlags: 0
