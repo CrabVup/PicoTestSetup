@@ -60,7 +60,7 @@ public class CraftingSystem : MonoBehaviour
         craftVfx.SetActive(true);
         isCrafted = true;
         NextRecipe();
-        Invoke("Craft", 1f);
+        Invoke("Craft", 0f);
     }
     public void Craft()
     {
@@ -92,13 +92,15 @@ public class CraftingSystem : MonoBehaviour
         {
             Debug.Log("Yes");
             craftDone.Play();
-            Instantiate(craftingRecipeSO.outputItemSO, itemSpawnPoint.position, itemSpawnPoint.rotation);
+            //Instantiate(craftingRecipeSO.outputItemSO, itemSpawnPoint.position, itemSpawnPoint.rotation);
             //Instantiate(craftingVFX, itemSpawnPoint.position, itemSpawnPoint.rotation);
         
             foreach (GameObject consumeItemGameObject in consumeItemGameObjectList)
             {
                 Destroy(consumeItemGameObject);
             }
+
+            Instantiate(craftingRecipeSO.outputItemSO, itemSpawnPoint.position, itemSpawnPoint.rotation);
         }
         craftVfx.SetActive(false);
         foreach (VirusTcell virusTcell in virusTcells)
