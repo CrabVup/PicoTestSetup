@@ -16,6 +16,8 @@ public class Qs : MonoBehaviour
     public TextMeshProUGUI craft_count;
     public TextMeshProUGUI kill_count;
 
+    public int scanned_counter;
+
     // LISTS OF THE PREFABS
     public List<GameObject> TCells1 = new List<GameObject>();
     public List<GameObject> TCells2 = new List<GameObject>();
@@ -25,13 +27,18 @@ public class Qs : MonoBehaviour
     public Image panel1;
     public Image panel2;
     public Image panel3;
+
+    // VIRUSES SCANNED
+    public Scan scanScript;
   
     // Start is called before the first frame update
     void Start()
     {
-        scan_count.text = "0/3";
-        craft_count.text = "0/3";
-        kill_count.text = "0/3";
+        scan_count.text = "/3";
+        craft_count.text = "/3";
+        kill_count.text = "/3";
+
+        scanned_counter = 0;
 
         scan_tick = GameObject.Find("tickMark").GetComponent<Image>();
         craft_tick = GameObject.Find("tickMark (1)").GetComponent<Image>();
@@ -49,14 +56,37 @@ public class Qs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (GameObject.Find("XR Origin").GetComponent<ZG>().isScanned == true)
         {
             scan_tick.enabled = true;
             scan_count.text = "1/3";
             panel1.color = UnityEngine.Color.green;
+        }*/
+
+        if (scanScript.scannedA == true)
+        {
+            scanned_counter++;
+            scan_count.text = scanned_counter.ToString(); 
         }
-        
-        if (GameObject.FindWithTag("PushButton").GetComponent<CraftingSystem>().isCrafted == true)
+        else
+        {
+            if (scanScript.scannedB == true)
+            {
+                scanned_counter++;
+                scan_count.text = scanned_counter.ToString();
+            }
+            else
+            {
+                if (scanScript.scannedC == true)
+                {
+                    scanned_counter++;
+                    scan_count.text = scanned_counter.ToString();
+                }
+            }
+        }
+
+            if (GameObject.FindWithTag("PushButton").GetComponent<CraftingSystem>().isCrafted == true)
         {
             craft_tick.enabled = true;
             craft_count.text = "1/3";

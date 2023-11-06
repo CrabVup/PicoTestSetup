@@ -36,6 +36,11 @@ public class Scan : MonoBehaviour
     public int scannedViruses;
 
     public bool isTracked;
+
+    public bool scannedA;
+    public bool scannedB;
+    public bool scannedC;
+
     void Start()
     {
         scannableIcon.SetActive(false);
@@ -47,7 +52,10 @@ public class Scan : MonoBehaviour
 
         scannedViruses = 0;
 
-    }
+        scannedA = false;
+        scannedB = false;
+        scannedC = false;
+}
 
   
     void Update()
@@ -151,7 +159,7 @@ public class Scan : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Scannable"))
         {
-                 isScanned = false;
+           isScanned = false;
            // scanFail.Play();
            if (isTracked)
             {
@@ -169,18 +177,32 @@ public class Scan : MonoBehaviour
             if (currentValue >= 100)
             {
                 scanSuccess.Play();
-                FirstScannedVirusAudio();
+                if (VirusID == "A")
+                {
+                    scannedA = true;
+                } else
+                {
+                    if (VirusID == "B")
+                    {
+                        scannedB = true;
+                    }
+                    else
+                    {
+                        if (VirusID == "C")
+                        {
+                            scannedC = true;
+                        }
+                    }
+                }
+                    FirstScannedVirusAudio();
             }
 
 
         }
-
-
     }
 
     public void FirstScannedVirusAudio()
     {
-
         scannedViruses += 1;
 
         if (scannedViruses == 1)
@@ -189,7 +211,6 @@ public class Scan : MonoBehaviour
             firstScan.Play();
 
         }
-
     }
 
 }
