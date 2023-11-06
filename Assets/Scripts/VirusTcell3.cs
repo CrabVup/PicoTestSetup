@@ -19,6 +19,8 @@ public class VirusTcell3 : MonoBehaviour
 
     public bool isKilled;
 
+    public virusAudio killVoice;
+
     void Start()
     {
         // Find all GameObjects with the Marker script and add them to the list.
@@ -97,6 +99,7 @@ public class VirusTcell3 : MonoBehaviour
                 if (other.CompareTag("bacteria"))
                 {
                     GetComponent<AudioSource>().Play();
+                    killVoice.KillingVirus();
                     playerHealth.Increase();
                     Destroy(other.gameObject);
                     Instantiate(virusDeathVfx, other.transform.position, Quaternion.identity);
@@ -107,6 +110,7 @@ public class VirusTcell3 : MonoBehaviour
                 else
                 {
                     GetComponent<AudioSource>().Play();
+                    killVoice.KillingVirus();
                     playerHealth.Decrease();
                     Instantiate(virusDeathVfx, other.transform.position, Quaternion.identity);
                     Destroy(this.gameObject);

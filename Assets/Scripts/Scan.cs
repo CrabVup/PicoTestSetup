@@ -31,7 +31,9 @@ public class Scan : MonoBehaviour
     public GameObject distanceB;
     public GameObject distanceC;
 
-    public AudioSource scanFail, scanSuccess;
+    public AudioSource scanFail, scanSuccess, firstScan;
+
+    public int scannedViruses;
 
     public bool isTracked;
     void Start()
@@ -42,6 +44,8 @@ public class Scan : MonoBehaviour
         VirusB.SetActive(false);
         VirusC.SetActive(false);
         lostTrackIcon.SetActive(false);
+
+        scannedViruses = 0;
 
     }
 
@@ -165,11 +169,26 @@ public class Scan : MonoBehaviour
             if (currentValue >= 100)
             {
                 scanSuccess.Play();
+                FirstScannedVirusAudio();
             }
 
 
         }
 
+
+    }
+
+    public void FirstScannedVirusAudio()
+    {
+
+        scannedViruses += 1;
+
+        if (scannedViruses == 1)
+        {
+
+            firstScan.Play();
+
+        }
 
     }
 
