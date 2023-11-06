@@ -75,11 +75,7 @@ public class Scan : MonoBehaviour
             lostTrackIcon.SetActive(false);
             scanningBar.color = Color.green;
             isTracked = true;
-            if (currentValue >= 100)
-            {
-                scanSuccess.Play();
-            }
-
+            
         }
         else
         {
@@ -162,10 +158,15 @@ public class Scan : MonoBehaviour
             currentValue += fillSpeed * Time.deltaTime;
             currentValue = Mathf.Clamp(currentValue, 0f, 100f);
             scanningBar.fillAmount = currentValue / 100f;
-     
+            if (currentValue >= 100)
+            {
+                scanSuccess.Play();
+            }
+
+
         }
 
-    
+
     }
 
 }
