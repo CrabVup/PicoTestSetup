@@ -5,7 +5,7 @@ using UnityEngine;
 public class virusAudio : MonoBehaviour
 {
 
-    public AudioSource firstKill, lastKill;
+    public AudioSource firstKill, lastKill, tcellDeath;
 
     public int virusKilled;
 
@@ -33,6 +33,13 @@ public class virusAudio : MonoBehaviour
             lastKill.Play();
 
         }
+
+    }
+
+    public void TCellDied()
+    {
+
+        tcellDeath.Play();
 
     }
 
