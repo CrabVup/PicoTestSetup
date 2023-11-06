@@ -34,11 +34,11 @@ public class Qs : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scan_count.text = "/3";
-        craft_count.text = "/3";
-        kill_count.text = "/3";
-
         scanned_counter = 0;
+
+        scan_count.text = scanned_counter.ToString();
+        craft_count.text = scanned_counter.ToString();
+        kill_count.text = scanned_counter.ToString();
 
         scan_tick = GameObject.Find("tickMark").GetComponent<Image>();
         craft_tick = GameObject.Find("tickMark (1)").GetComponent<Image>();
