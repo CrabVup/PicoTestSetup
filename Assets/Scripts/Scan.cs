@@ -60,10 +60,15 @@ public class Scan : MonoBehaviour
             distanceC.SetActive(true);
             lostTrackIcon.SetActive(false);
             isTracked = false;
+            //scanFail.Play();
             Debug.Log("222");
         
         }
        
+        if (isScanned == false)
+        {
+            scanFail.Play();
+        }
         if (isScanned == true)
         {
             scannableIcon.SetActive(true);
@@ -83,7 +88,7 @@ public class Scan : MonoBehaviour
             if (isTracked)
             {
                 lostTrackIcon.SetActive(true);
-                scanFail.Play();
+              
             }
 
         }
