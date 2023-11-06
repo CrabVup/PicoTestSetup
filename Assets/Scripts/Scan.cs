@@ -178,7 +178,7 @@ public class Scan : MonoBehaviour
             {
                 scanSuccess.Play();
                 FirstScannedVirusAudio();
-            } else
+            } /*else
             {
                 if (currentValue == 100)
                 {
@@ -202,7 +202,7 @@ public class Scan : MonoBehaviour
                         }
                     }
                 }
-            }
+            }*/
 
 
         }
