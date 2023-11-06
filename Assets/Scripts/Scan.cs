@@ -104,7 +104,7 @@ public class Scan : MonoBehaviour
             lostTrackIcon.SetActive(false);
             scanningBar.color = Color.green;
             isTracked = false;
-            scanSuccess.Play();
+            //scanSuccess.Play();
 
         }
     }
@@ -140,6 +140,10 @@ public class Scan : MonoBehaviour
           if (other.gameObject.layer == LayerMask.NameToLayer("Scannable"))
             {
                  isScanned = true;
+            if (currentValue == 100)
+            {
+                scanSuccess.Play();
+            }
             }
     }
     private void OnTriggerExit(Collider other)
