@@ -30,7 +30,10 @@ public class Qs : MonoBehaviour
 
     // VIRUSES SCANNED
     public Scan scanScript;
-  
+
+    public GameObject virusA;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,37 +59,18 @@ public class Qs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (GameObject.Find("XR Origin").GetComponent<ZG>().isScanned == true)
-        {
-            scan_tick.enabled = true;
-            scan_count.text = "1/3";
-            panel1.color = UnityEngine.Color.green;
-        }*/
 
-        if (scanScript.scannedA == true)
+        if (/*virusA.GetComponent<Virus>().isScanned == true*/ scan_tick.enabled == false) // RANDOM IF 
         {
-            scanned_counter++;
-            scan_count.text = scanned_counter.ToString(); 
-        }
-        else
-        {
-            if (scanScript.scannedB == true)
+            scan_count.text = scanned_counter.ToString();
+            if (scan_count.text == "3/3")
             {
-                scanned_counter++;
-                scan_count.text = scanned_counter.ToString();
-            }
-            else
-            {
-                if (scanScript.scannedC == true)
-                {
-                    scanned_counter++;
-                    scan_count.text = scanned_counter.ToString();
-                }
+                scan_tick.enabled = true;
+                panel1.color = UnityEngine.Color.green;
             }
         }
 
-            if (GameObject.FindWithTag("PushButton").GetComponent<CraftingSystem>().isCrafted == true)
+        if (GameObject.FindWithTag("PushButton").GetComponent<CraftingSystem>().isCrafted == true)
         {
             craft_tick.enabled = true;
             craft_count.text = "1/3";

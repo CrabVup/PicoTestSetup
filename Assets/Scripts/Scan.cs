@@ -37,9 +37,9 @@ public class Scan : MonoBehaviour
 
     public bool isTracked;
 
-    public bool scannedA;
-    public bool scannedB;
-    public bool scannedC;
+    public GameObject scanner;
+
+    //public List<GameObject> VirusesA = new List<GameObject>();
 
     void Start()
     {
@@ -51,10 +51,6 @@ public class Scan : MonoBehaviour
         lostTrackIcon.SetActive(false);
 
         scannedViruses = 0;
-
-        scannedA = false;
-        scannedB = false;
-        scannedC = false;
 }
 
   
@@ -178,33 +174,24 @@ public class Scan : MonoBehaviour
             {
                 scanSuccess.Play();
                 FirstScannedVirusAudio();
-            } /*else
-            {
+            } else
+            { 
                 if (currentValue == 100)
                 {
                     if (VirusID == "A")
                     {
-                        scannedA = true;
-
-                    } else
+                        GameObject.FindWithTag("VirusA").GetComponent<Virus>().MarkAsScanned();
+                    }
+                    if (VirusID == "B")
                     {
-                        if (VirusID == "B")
-                        {
-                            scannedB = true;
-
-                        }
-                        else
-                        {
-                            if (VirusID == "C")
-                            {
-                                scannedC = true;
-                            }
-                        }
+                        GameObject.FindWithTag("VirusB").GetComponent<Virus>().MarkAsScanned();
+                    }
+                    if (VirusID == "C")
+                    {
+                        GameObject.FindWithTag("bacteria").GetComponent<Virus>().MarkAsScanned();
                     }
                 }
-            }*/
-
-
+            }
         }
     }
 
@@ -220,4 +207,25 @@ public class Scan : MonoBehaviour
         }
     }
 
+    /*
+    public void Avirus()
+    {
+        Virus[] aViruses = FindObjectsOfType<Virus>();
+
+        VirusesA.Clear();
+
+        HashSet<Virus> aV = new HashSet<Virus>();
+
+        foreach (Virus aViruse in aViruses)
+        {
+            if (!aV.Contains(aViruse))
+            {
+                VirusesA.Add(aViruse.gameObject);
+
+                aV.Add(aViruse);
+            }
+        }
+
+        scanner.GetComponent<Virus>().MarkAsScanned();
+    }*/
 }
