@@ -103,6 +103,7 @@ public class VirusTcell2 : MonoBehaviour
                 else
                 {
                     GetComponent<AudioSource>().Play();
+                    killVoice.TCellDied();
                     playerHealth.Decrease();
                     Instantiate(virusDeathVfx, other.transform.position, Quaternion.identity);
                     Destroy(this.gameObject);
