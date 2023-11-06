@@ -60,7 +60,7 @@ public class Scan : MonoBehaviour
             distanceC.SetActive(true);
             lostTrackIcon.SetActive(false);
             isTracked = false;
-            //scanFail.Play();
+            scanFail.Play();
             Debug.Log("222");
         
         }
@@ -81,7 +81,7 @@ public class Scan : MonoBehaviour
         {
             scannableIcon.SetActive(false);
             scanningBar.color = Color.red;
-
+            scanFail.Play();
             if (isTracked)
             {
                 lostTrackIcon.SetActive(true);
@@ -148,7 +148,7 @@ public class Scan : MonoBehaviour
         if (other.gameObject.layer == LayerMask.NameToLayer("Scannable"))
         {
                  isScanned = false;
-            scanFail.Play();
+           // scanFail.Play();
         }
     }
     public void GetInfo()
