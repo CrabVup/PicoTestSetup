@@ -11,7 +11,7 @@ public class Qs : MonoBehaviour
     public Image craft_tick;
     public Image kill_tick;
 
-    // THE TEXTS 0/1 - 1/1
+    // THE TEXTS 0/1 - 1/3
     public TextMeshProUGUI scan_count;
     public TextMeshProUGUI craft_count;
     public TextMeshProUGUI kill_count;
@@ -25,26 +25,25 @@ public class Qs : MonoBehaviour
     public Image panel1;
     public Image panel2;
     public Image panel3;
-
-    private void Awake()
-    {
-        scan_tick = GetComponent<UnityEngine.UI.Image>();
-        craft_tick = GetComponent<UnityEngine.UI.Image>();
-        kill_tick = GetComponent<UnityEngine.UI.Image>();
-    }
-
+  
     // Start is called before the first frame update
     void Start()
     {
-        scan_count.text = "0/1";
-        craft_count.text = "0/1";
-        kill_count.text = "0/1";
+        scan_count.text = "0/3";
+        craft_count.text = "0/3";
+        kill_count.text = "0/3";
+
         scan_tick = GameObject.Find("tickMark").GetComponent<Image>();
         craft_tick = GameObject.Find("tickMark (1)").GetComponent<Image>();
         kill_tick = GameObject.Find("tickMark (2)").GetComponent<Image>();
+
         panel1 = GameObject.Find("Quest1").GetComponent<Image>();
         panel2 = GameObject.Find("Quest2").GetComponent<Image>();
         panel3 = GameObject.Find("Quest3").GetComponent<Image>();
+
+        scan_tick.enabled = false;
+        craft_tick.enabled = false;
+        kill_tick.enabled = false;
     }
 
     // Update is called once per frame
@@ -53,14 +52,14 @@ public class Qs : MonoBehaviour
         if (GameObject.Find("XR Origin").GetComponent<ZG>().isScanned == true)
         {
             scan_tick.enabled = true;
-            scan_count.text = "1/1";
+            scan_count.text = "1/3";
             panel1.color = UnityEngine.Color.green;
         }
         
         if (GameObject.FindWithTag("PushButton").GetComponent<CraftingSystem>().isCrafted == true)
         {
             craft_tick.enabled = true;
-            craft_count.text = "1/1";
+            craft_count.text = "1/3";
             panel2.color = UnityEngine.Color.green;
         }
 
@@ -98,7 +97,7 @@ public class Qs : MonoBehaviour
             if (virusTcell.isKilled)
             {
                 kill_tick.enabled = true;
-                kill_count.text = "1/1";
+                kill_count.text = "1/3";
                 panel3.color = UnityEngine.Color.green;
             }
         }
@@ -133,7 +132,7 @@ public class Qs : MonoBehaviour
             if (virusTcell2.isKilled)
             {
                 kill_tick.enabled = true;
-                kill_count.text = "1/1";
+                kill_count.text = "1/3";
                 panel3.color = UnityEngine.Color.green;
             }
         }
@@ -168,10 +167,9 @@ public class Qs : MonoBehaviour
             if (virusTcell3.isKilled)
             {
                 kill_tick.enabled = true;
-                kill_count.text = "1/1";
+                kill_count.text = "1/3";
                 panel3.color = UnityEngine.Color.green;
             }
         }
     }
-   
 }
