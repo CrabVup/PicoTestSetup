@@ -19,6 +19,8 @@ public class CraftingSystem : MonoBehaviour
 
     public bool isCrafted;
 
+    public PlayerHealth playerHealth;
+
     public int counter_craft;
 
     private void Awake()
@@ -95,6 +97,7 @@ public class CraftingSystem : MonoBehaviour
             Debug.Log("Yes");
             craftDone.Play();
             counter_craft++;
+            playerHealth.Increase();
 
             //Instantiate(craftingRecipeSO.outputItemSO, itemSpawnPoint.position, itemSpawnPoint.rotation);
             //Instantiate(craftingVFX, itemSpawnPoint.position, itemSpawnPoint.rotation);

@@ -32,6 +32,7 @@ public class Qs : MonoBehaviour
     public GameObject virusB;
     public GameObject virusC;
 
+    public PlayerHealth playerHealth;
 
     // Start is called before the first frame update
     void Start()
@@ -76,6 +77,7 @@ public class Qs : MonoBehaviour
         if (!isScannedA)
         {
             scan_count.text = scanned_counter.ToString();
+            playerHealth.Increase();
             if (scan_count.text == "3/3")
             {
                 scan_tick.enabled = true;
@@ -86,6 +88,7 @@ public class Qs : MonoBehaviour
         if (!isScannedB)
         {
             scan_count.text = scanned_counter.ToString();
+            playerHealth.Increase();
             if (scan_count.text == "3/3")
             {
                 scan_tick.enabled = true;
@@ -96,6 +99,7 @@ public class Qs : MonoBehaviour
         if (!isScannedC)
         {
             scan_count.text = scanned_counter.ToString();
+            playerHealth.Increase();
             if (scan_count.text == "3/3")
             {
                 scan_tick.enabled = true;

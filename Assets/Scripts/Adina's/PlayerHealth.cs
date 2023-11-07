@@ -11,10 +11,10 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth = 10f;
     public float chipSpeed = 2f; // how quickly the delayed bar takes to catch up to the default/ original one 
 
-    public Image frontHealthBar;
-    public Image backHealthBar;
+    //public Image frontHealthBar;
+    //public Image backHealthBar;
 
-    public TextMeshProUGUI txtNumber;
+    //public TextMeshProUGUI txtNumber;
     public int number = 0;
 
     public bool col;
@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
-        txtNumber.text = ("Clear all the virus ") + number.ToString() + ("/ 3");
+        //txtNumber.text = ("Clear all the virus ") + number.ToString() + ("/ 3");
         health = Mathf.Clamp(health, 0, maxHealth);
         UpdateHealthUI();
         if (col == true) // THE CONDITION HERE IS "THE TYPE DOESN'T MATCH", IT WILL LOWER THE BAR, BUT I DIDN'T CODE THAT, SO THE CONDITION CAN BE FOUND IN ONE OF THE OTHER SCRIPTS WE HAVE IN GAME
@@ -43,21 +43,21 @@ public class PlayerHealth : MonoBehaviour
     {
         //Debug.Log(health);
 
-        float fillF = frontHealthBar.fillAmount;
-        float fillB = backHealthBar.fillAmount;
+        //float fillF = frontHealthBar.fillAmount;
+        //float fillB = backHealthBar.fillAmount;
         float hFraction = health / maxHealth; // local variable for health; decimal fraction of our max health
 
-        if (fillB > hFraction)
-        {
-            frontHealthBar.fillAmount = hFraction;
-            backHealthBar.color = Color.red;
+        //if (fillB > hFraction)
+        //{
+            //frontHealthBar.fillAmount = hFraction;
+            //backHealthBar.color = Color.red;
             lerpTimer += Time.deltaTime;
             float percentComplete = lerpTimer / chipSpeed;
             percentComplete = percentComplete * percentComplete;
-            backHealthBar.fillAmount = Mathf.Lerp(fillB, hFraction, percentComplete);
-        }
+            //backHealthBar.fillAmount = Mathf.Lerp(fillB, hFraction, percentComplete);
+        //}
         
-        if (fillF < hFraction)
+        /*if (fillF < hFraction)
         {
             backHealthBar.color = Color.green;
             backHealthBar.fillAmount = hFraction;
@@ -66,7 +66,7 @@ public class PlayerHealth : MonoBehaviour
             percentComplete = percentComplete * percentComplete;
             frontHealthBar.fillAmount = Mathf.Lerp(fillF, backHealthBar.fillAmount, percentComplete);
         }
-        
+        */
 
        // healthText.text = Mathf.Round(health) + "/" + Mathf.Round(maxHealth);
     }

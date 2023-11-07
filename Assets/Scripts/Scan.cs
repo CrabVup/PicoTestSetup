@@ -39,6 +39,8 @@ public class Scan : MonoBehaviour
 
     public GameObject scanner;
 
+    //public PlayerHealth playerHealth;
+
     //public List<GameObject> VirusesA = new List<GameObject>();
 
     void Start()
@@ -181,6 +183,7 @@ public class Scan : MonoBehaviour
                     if (VirusID == "A")
                     {
                         GameObject.FindWithTag("VirusA").GetComponent<Virus>().MarkAsScanned();
+
                     }
                     if (VirusID == "B")
                     {
