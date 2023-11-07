@@ -5474,7 +5474,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674408277}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.69299793, y: 0.1, z: 2.8876915}
+  m_LocalPosition: {x: 0.69299793, y: -0.13, z: 2.8876915}
   m_LocalScale: {x: 0.053823438, y: 11.830405, z: 15.892907}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6700,11 +6700,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 44569973920300872, guid: fcddc6610165fd64781bc126058cd453, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 44569973920300875, guid: fcddc6610165fd64781bc126058cd453, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 44569973920300877, guid: fcddc6610165fd64781bc126058cd453, type: 3}
       propertyPath: m_RootOrder
@@ -6762,6 +6762,10 @@ PrefabInstance:
       propertyPath: killVoice
       value: 
       objectReference: {fileID: 1853847406}
+    - target: {fileID: 5694457208958930371, guid: fcddc6610165fd64781bc126058cd453, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcddc6610165fd64781bc126058cd453, type: 3}
 --- !u!4 &760983430 stripped
@@ -10947,7 +10951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2300717869087292587, guid: 5a5a65ac1cb065e42805cf4009035ba7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300717869087292588, guid: 5a5a65ac1cb065e42805cf4009035ba7, type: 3}
       propertyPath: m_RootOrder
@@ -10995,7 +10999,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2300717869666795538, guid: 5a5a65ac1cb065e42805cf4009035ba7, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9097310911055378122, guid: 5a5a65ac1cb065e42805cf4009035ba7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a5a65ac1cb065e42805cf4009035ba7, type: 3}
@@ -18032,11 +18040,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 887353193355248853, guid: 22211317e9975ec41957d2a02877e379, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 887353193355248854, guid: 22211317e9975ec41957d2a02877e379, type: 3}
       propertyPath: m_Name
       value: T-Cell 1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 887353193355248854, guid: 22211317e9975ec41957d2a02877e379, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3226276646844384421, guid: 22211317e9975ec41957d2a02877e379, type: 3}
       propertyPath: Target
