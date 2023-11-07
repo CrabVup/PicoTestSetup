@@ -5423,7 +5423,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674408277}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5474,7 +5474,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674408277}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.69299793, y: 0.03, z: 2.8876915}
+  m_LocalPosition: {x: 0.69299793, y: 0.21, z: 2.8876915}
   m_LocalScale: {x: 0.053823438, y: 11.830405, z: 15.892907}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15909,7 +15909,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528469019}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.67, y: -17.31, z: -43.86}
+  m_LocalPosition: {x: 8.67, y: -16.941, z: -43.86}
   m_LocalScale: {x: 1.955387, y: 0.9197553, z: 1.955387}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18349,7 +18349,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853847393}
   m_LocalRotation: {x: -0, y: -0.70455766, z: -0, w: 0.7096467}
-  m_LocalPosition: {x: 5.76, y: -16.956562, z: -47.86}
+  m_LocalPosition: {x: 7.67, y: -16.7, z: -44.308}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -18542,7 +18542,6 @@ MonoBehaviour:
   firstKill: {fileID: 1341095901}
   lastKill: {fileID: 1061795114}
   tcellDeath: {fileID: 629195852}
-  tcellDeathEnd: {fileID: 0}
   virusKilled: 0
 --- !u!1 &1858219407
 GameObject:
