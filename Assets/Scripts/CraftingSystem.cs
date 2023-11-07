@@ -21,6 +21,8 @@ public class CraftingSystem : MonoBehaviour
 
     public int counter_craft;
 
+    public PlayerHehe playerHehe;
+
     private void Awake()
     {
         //NextRecipe();
@@ -95,6 +97,7 @@ public class CraftingSystem : MonoBehaviour
             Debug.Log("Yes");
             craftDone.Play();
             counter_craft++;
+            playerHehe.Increase();
 
             //Instantiate(craftingRecipeSO.outputItemSO, itemSpawnPoint.position, itemSpawnPoint.rotation);
             //Instantiate(craftingVFX, itemSpawnPoint.position, itemSpawnPoint.rotation);
