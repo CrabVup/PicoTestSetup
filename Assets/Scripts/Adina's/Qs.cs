@@ -29,6 +29,8 @@ public class Qs : MonoBehaviour
     public Image panel3;
 
     public GameObject virusA;
+    public GameObject virusB;
+    public GameObject virusC;
 
 
     // Start is called before the first frame update
@@ -67,9 +69,31 @@ public class Qs : MonoBehaviour
              }
          }*/
 
-        bool isScanned = virusA.GetComponent<Virus>().IsScanned();
+        bool isScannedA = virusA.GetComponent<Virus>().IsScanned();
+        bool isScannedB = virusB.GetComponent<Virus>().IsScanned();
+        bool isScannedC = virusC.GetComponent<Virus>().IsScanned();
 
-        if (!isScanned && virusA.GetComponent<Virus>() != null)
+        if (!isScannedA)
+        {
+            scan_count.text = scanned_counter.ToString();
+            if (scan_count.text == "3/3")
+            {
+                scan_tick.enabled = true;
+                panel1.color = UnityEngine.Color.green;
+            }
+        }
+
+        if (!isScannedB)
+        {
+            scan_count.text = scanned_counter.ToString();
+            if (scan_count.text == "3/3")
+            {
+                scan_tick.enabled = true;
+                panel1.color = UnityEngine.Color.green;
+            }
+        }
+
+        if (!isScannedC)
         {
             scan_count.text = scanned_counter.ToString();
             if (scan_count.text == "3/3")

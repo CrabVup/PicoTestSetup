@@ -13887,6 +13887,8 @@ MonoBehaviour:
   panel2: {fileID: 312368179}
   panel3: {fileID: 1287502267}
   virusA: {fileID: 6504990091837022669}
+  virusB: {fileID: 6324522621614599038}
+  virusC: {fileID: 1560730054}
 --- !u!1 &1340703782
 GameObject:
   m_ObjectHideFlags: 0
