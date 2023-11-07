@@ -5,10 +5,31 @@ using UnityEngine;
 public class Marker : MonoBehaviour
 {
     public bool isPlaced;
+    //public bool isCrafted;
 
+    /*
+    public struct MarkerInfo
+    {
+        public string MarkerName;
+    }
+
+    [SerializeField]
+    public MarkerInfo info;
+
+    public override string ToString()
+    {
+        return $"MarkerName: {MarkerName}";
+    }
+
+    public string GetID()
+    {
+        return info.MarkerName;
+    }
+    */
     public void StartAction()
     {
         isPlaced = true;
+        //isCrafted = false;
         Debug.Log("isPlaced");
 
     }
@@ -36,5 +57,11 @@ public class Marker : MonoBehaviour
             isPlaced = false;
         }
     }
+    /*
+    public void MarkAsCrafted()
+    {
+        isCrafted = true;
+    }
+    */
 }
 

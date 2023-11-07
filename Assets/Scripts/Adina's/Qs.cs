@@ -103,11 +103,25 @@ public class Qs : MonoBehaviour
             }
         }
 
-        if (GameObject.FindWithTag("PushButton").GetComponent<CraftingSystem>().isCrafted == true)
+        if (GameObject.FindWithTag("PushButton").GetComponent<CraftingSystem>().counter_craft == 1)
         {
-            craft_tick.enabled = true;
             craft_count.text = "1/3";
-            panel2.color = UnityEngine.Color.green;
+        }
+        else
+        {
+            if (GameObject.FindWithTag("PushButton").GetComponent<CraftingSystem>().counter_craft == 2)
+            {
+                craft_count.text = "2/3";
+            }
+            else
+            {
+                if (GameObject.FindWithTag("PushButton").GetComponent<CraftingSystem>().counter_craft == 3)
+                {
+                    craft_count.text = "3/3";
+                    panel2.color = UnityEngine.Color.green;
+                    craft_tick.enabled = true;
+                }
+            }
         }
 
         Cells1();

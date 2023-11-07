@@ -19,6 +19,8 @@ public class CraftingSystem : MonoBehaviour
 
     public bool isCrafted;
 
+    public int counter_craft;
+
     private void Awake()
     {
         //NextRecipe();
@@ -92,9 +94,11 @@ public class CraftingSystem : MonoBehaviour
         {
             Debug.Log("Yes");
             craftDone.Play();
+            counter_craft++;
+
             //Instantiate(craftingRecipeSO.outputItemSO, itemSpawnPoint.position, itemSpawnPoint.rotation);
             //Instantiate(craftingVFX, itemSpawnPoint.position, itemSpawnPoint.rotation);
-        
+
             foreach (GameObject consumeItemGameObject in consumeItemGameObjectList)
             {
                 Destroy(consumeItemGameObject);
