@@ -1334,18 +1334,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.755874, g: 0.78889805, b: 0.8962264, a: 1}
+  m_Color: {r: 0.3647059, g: 0.83137256, b: 0.44313726, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 74eba9716954e374ca42ebc50307c665, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -1375,7 +1375,7 @@ MonoBehaviour:
   lerpTimer: 0
   maxHealth: 10
   chipSpeed: 2
-  frontHealthBar: {fileID: 7046280373461375199}
+  frontHealthBar: {fileID: 135392463}
   backHealthBar: {fileID: 7046280373461375198}
   txtNumber: {fileID: 7046280373461375197}
   number: 0
@@ -2597,18 +2597,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.75686276, g: 0.7921569, b: 0.8980392, a: 0.6666667}
+  m_Color: {r: 0.3647059, g: 0.83137256, b: 0.44313726, a: 0.6666667}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 74eba9716954e374ca42ebc50307c665, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -2638,7 +2638,7 @@ MonoBehaviour:
   lerpTimer: 0
   maxHealth: 10
   chipSpeed: 2
-  frontHealthBar: {fileID: 7046280373461375199}
+  frontHealthBar: {fileID: 312368179}
   backHealthBar: {fileID: 7046280373461375198}
   txtNumber: {fileID: 7046280373461375197}
   number: 0
@@ -3735,8 +3735,8 @@ Transform:
   - {fileID: 595859373}
   - {fileID: 1194976432}
   - {fileID: 1785084401}
-  - {fileID: 1649348444}
   - {fileID: 1013940019}
+  - {fileID: 1649348444}
   - {fileID: 1384557795}
   - {fileID: 760983430}
   - {fileID: 1891641618}
@@ -19969,7 +19969,7 @@ MonoBehaviour:
   firstScan: {fileID: 0}
   scannedViruses: 0
   isTracked: 0
-  scanner: {fileID: 0}
+  playerHealth: {fileID: 0}
 --- !u!114 &1930816441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23796,6 +23796,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 709990318}
     - target: {fileID: 2049221285894322424, guid: 9a95adf655961014ea7b4d7030eb4d90, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 135392465}
+    - target: {fileID: 2049221285894322424, guid: 9a95adf655961014ea7b4d7030eb4d90, type: 3}
       propertyPath: virusDescription1
       value: 
       objectReference: {fileID: 708096621}
@@ -24524,6 +24528,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 304832504}
     - target: {fileID: 6259597831393802437, guid: 67dee605d72e2524c95c29785153d7f9, type: 3}
+      propertyPath: playerHehe
+      value: 
+      objectReference: {fileID: 312368181}
+    - target: {fileID: 6259597831393802437, guid: 67dee605d72e2524c95c29785153d7f9, type: 3}
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 1994901511}
@@ -25113,17 +25121,6 @@ MonoBehaviour:
 --- !u!114 &7046280373461375198 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7046280374082038729, guid: b1395f9f3b338d747b07c54de4636c37, type: 3}
-  m_PrefabInstance: {fileID: 7046280373461375196}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7046280373461375199 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7046280373291035219, guid: b1395f9f3b338d747b07c54de4636c37, type: 3}
   m_PrefabInstance: {fileID: 7046280373461375196}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

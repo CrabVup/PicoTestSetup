@@ -37,7 +37,7 @@ public class Scan : MonoBehaviour
 
     public bool isTracked;
 
-    public GameObject scanner;
+    //public GameObject scanner;
 
     public PlayerHealth playerHealth;
 
