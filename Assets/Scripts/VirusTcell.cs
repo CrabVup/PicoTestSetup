@@ -102,6 +102,7 @@ public class VirusTcell : MonoBehaviour
                     isKilled = true;
                     marker.gameObject.SetActive(false);
                     calculateDistance.virusADestroyed = true; // this is only for virus a, you'll need to add those tags for the other two viruses
+                 
                 }
                 else
                 {
