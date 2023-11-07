@@ -69,7 +69,7 @@ public class Qs : MonoBehaviour
 
         bool isScanned = virusA.GetComponent<Virus>().IsScanned();
 
-        if (!isScanned)
+        if (!isScanned && virusA.GetComponent<Virus>() != null)
         {
             scan_count.text = scanned_counter.ToString();
             if (scan_count.text == "3/3")
